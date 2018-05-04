@@ -14,9 +14,11 @@ git add . toto můžu použít v případě, že jsem najetá v daném adresář
 
 git commit - commitne všechny soubory, u kterých jsem si dřív dala git add
 
+Jakmile dám git commit, vyjede mi textový okénko, do kterého napíšu svůj komentář, ten uložím a zavřu.
+
 => teď už je to u mě v pc commitnuté, ale stále to nevidí Áďa
 
-Aby to viděla Áďa, musím použít GitHUB 
+Aby to viděla Áďa, musím použít Git push 
 
 git push - příkaz, který odešle všechno, co já mám commitnuté
 
