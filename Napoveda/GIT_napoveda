@@ -1,0 +1,58 @@
+Pushing the first project to github:
+
+https://gist.github.com/mindplace/b4b094157d7a3be6afd2c96370d39fad
+
+git diff - ukazuje rozdíly mezi tím, co je commitnuté v adresáři a tím, co jsem teď udělala
+
+git status - vypíše, v jakém stavu mám data nebo projekt (jestli tam mám něco upravené, nebo nemám žádné změny). Říká, co se děje v části, ve které teď pracuju.
+
+git add - přidá soubory do stagingu, ale ještě to nejsou commitnuté soubory
+
+git add Název souboru, na kterém jsem pracovala nebo 
+
+git add . toto můžu použít v případě, že jsem najetá v daném adresáři - nahraje to vše, co je v aktuálním adresáři.
+
+git commit - commitne všechny soubory, u kterých jsem si dřív dala git add
+
+=> teď už je to u mě v pc commitnuté, ale stále to nevidí Áďa
+
+Aby to viděla Áďa, musím použít GitHUB 
+
+git push - příkaz, který odešle všechno, co já mám commitnuté
+
+!Když dám jenom git add a potom git push, tak se nic nestane!
+
+git pull - když chci stáhnout to, co Áďa commitla v dané větvi (ale tu větev musím mít u sebe i já, pokud ji nemám, použiju právě git fetch), tak u sebe v příkazové řádce musím být najetá ve složce, kde je uložený repozitář gitu. Potom napíšu git pull.
+
+git fetch - stáhne změny, které Áďa udělala v jakékoliv větvi do takového "vzduchoprázdna." Protože ale může jít o větev, kde si Áďa něco testuje, tak není v mém zájmu, abych si to commitla do master větve. Proto, než si to commitnu, musím udělat novou větev i u sebe! 
+
+Při stahování git fetch mi git vypíše, jak se větev, kterou si Áďa vytvořila, jmenuje. Toto jméno já budu potřebovat, abych mohla s její testovací větví pracovat!
+
+Musím tedy udělat:
+
+git checkout -b názázev větve (tu si pojmenuju podle sebe, nemusí se shodovat s názvem větve, který si určila Áďa) 
+
+příkaz pokračuje, výše není vypsaný celý! Celý příkaz je:
+
+git checkout -b název větve, který jsem si určila origin/název Ádiné větve
+
+v tuto chvíli se mi vytvořila větev pod mým názvem, která obsahuje všechny commity z Ádiné větve. 
+
+Když Áďa něco přidá nebo změní, objeví se mi ten daný soubor ve složce, kde mám repozitář. Tento soubor (např. txt. si otevřu a normálně v něm pracuju). Jakmile budu chtít commitnout změny, které jsem v daném souboru udělala, tak opakuju to, co jsem vypisovala na začátku - git add, git commit. 
+
+git remote -v - to mi vypíše, o jakých vzdálených repozitářích git ví.
+
+
+!! GitHUB je jenom na prohlížení a sdílení, nepracuju v něm, maximálně přidám nějaký komentář !!
+-------------------------------------------------------------------------------------------------
+Branch = větev 
+
+Git sám o sobě vytváří větev master
+
+git checkout -b název větve (ten název si vymyslím) - to mi vytvoří novou větev, ve které můžu dělat další commity. Když zjistím, že se mi tam např. něco rozbilo nebo řeším nějaký jiný problém, tak pomocí git checkout master se vrátím s prací do posledního commitu ve větvi master. 
+
+git checkout název větve, co jsem si vytvořila - mě hodí do posledního commitu mnou nebo Áďou vytvořené větve.
+
+git merge master - všechny commity v dané větvi, kterou jsem si vytvořila, hodí na konec větve master
+-------------------------------------------------------------------------------------------------
+
