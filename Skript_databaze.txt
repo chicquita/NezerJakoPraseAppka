@@ -1,0 +1,155 @@
+CREATE TABLE public.denni_chody (
+	id int8 NOT NULL,
+	nazev varchar(50) NOT NULL,
+	CONSTRAINT denni_chody_pk PRIMARY KEY (id)
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+ALTER TABLE public.denni_chody OWNER TO janicka;
+
+
+CREATE TABLE public.kategorie (
+	id int8 NOT NULL,
+	nazev varchar(50) NOT NULL,
+	CONSTRAINT kategorie_pk PRIMARY KEY (id)
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+ALTER TABLE public.kategorie OWNER TO janicka;
+
+
+
+CREATE TABLE public.merna_jednotka (
+	id int8 NOT NULL,
+	nazev varchar(50) NOT NULL,
+	zkratka varchar(5) NOT NULL,
+	CONSTRAINT merna_jednotka_pk PRIMARY KEY (id)
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+ALTER TABLE public.merna_jednotka OWNER TO janicka;
+
+
+
+CREATE TABLE public.domacnost (
+	id int8 NOT NULL,
+	nazev varchar(100) NOT NULL,
+	CONSTRAINT domacnost_pk PRIMARY KEY (id)
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+ALTER TABLE public.domacnost OWNER TO janicka;
+
+
+CREATE TABLE public.jidelnicek (
+	id int8 NOT NULL,
+	datum date NOT NULL,
+	id_uzivatel int8 NOT NULL,
+	CONSTRAINT jidelnicek_pk PRIMARY KEY (id),
+	CONSTRAINT jidelnicek_uzivatel_fk FOREIGN KEY (id_uzivatel) REFERENCES uzivatel(id)
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+ALTER TABLE public.jidelnicek OWNER TO janicka;
+
+
+CREATE TABLE public.jidelnicek_polozky (
+	id int8 NOT NULL,
+	id_potraviny int8 NOT NULL,
+	id_jidelnicek int8 NOT NULL,
+	id_denni_chody int8 NOT NULL,
+	baleni int4 NOT NULL,
+	CONSTRAINT jidelnicek_polozky_pk PRIMARY KEY (id),
+	CONSTRAINT jidelnicek_polozky_denni_chody_fk FOREIGN KEY (id_denni_chody) REFERENCES denni_chody(id),
+	CONSTRAINT jidelnicek_polozky_jidelnicek_fk FOREIGN KEY (id_jidelnicek) REFERENCES jidelnicek(id),
+	CONSTRAINT jidelnicek_polozky_potraviny_fk FOREIGN KEY (id_potraviny) REFERENCES potraviny(id)
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+ALTER TABLE public.jidelnicek_polozky OWNER TO janicka;
+
+
+
+CREATE TABLE public.potraviny (
+	id int8 NOT NULL,
+	nazev varchar(100) NOT NULL,
+	kj int2 NOT NULL,
+	tuky int2 NULL,
+	bilkoviny int2 NULL,
+	sacharidy int2 NULL,
+	baleni int4 NOT NULL,
+	id_merna_jednotka int8 NOT NULL,
+	delitelnost bpchar(5) NULL,
+	id_kategorie int8 NOT NULL,
+	carovy_kod int4 NULL,
+	CONSTRAINT potraviny_pk PRIMARY KEY (id),
+	CONSTRAINT potraviny_kategorie_fk FOREIGN KEY (id_kategorie) REFERENCES kategorie(id),
+	CONSTRAINT potraviny_merna_jednotka_fk FOREIGN KEY (id_merna_jednotka) REFERENCES merna_jednotka(id)
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+ALTER TABLE public.potraviny OWNER TO janicka;
+
+
+CREATE TABLE public.uzivatel (
+	id int8 NOT NULL,
+	jmeno varchar(100) NOT NULL,
+	prijmeni varchar(100) NOT NULL,
+	mail varchar(100) NOT NULL,
+	vek int2 NOT NULL,
+	vaha int2 NOT NULL,
+	vyska int2 NOT NULL,
+	pohlavi bpchar(1) NOT NULL,
+	makro_bilkoviny int2 NULL,
+	makro_sacharidy int2 NULL,
+	makro_tuky int2 NULL,
+	denni_prijem_kj int2 NOT NULL,
+	id_domacnost int8 NOT NULL,
+	nickname varchar(100) NULL,
+	CONSTRAINT uzivatel_pk PRIMARY KEY (id),
+	CONSTRAINT uzivatel_domacnost_fk FOREIGN KEY (id_domacnost) REFERENCES domacnost(id)
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+ALTER TABLE public.uzivatel OWNER TO janicka;
+
+
+CREATE TABLE public.zasoby (
+	id int8 NOT NULL,
+	id_potraviny int8 NOT NULL,
+	baleni int4 NOT NULL,
+	id_domacnost int8 NOT NULL,
+	CONSTRAINT zasoby_pk PRIMARY KEY (id),
+	CONSTRAINT zasoby_domacnost_fk FOREIGN KEY (id_domacnost) REFERENCES domacnost(id),
+	CONSTRAINT zasoby_potraviny_fk FOREIGN KEY (id_potraviny) REFERENCES potraviny(id)
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+ALTER TABLE public.zasoby OWNER TO janicka;
+
+
+
+
+
