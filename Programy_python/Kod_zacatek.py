@@ -18,8 +18,8 @@ def informace_web():
 #pomoci cursoru delam to, co chci delat na databazi
 	cur1 = conn.cursor()
 
-	cur1.execute("SELECT nazev, kj FROM potraviny;") #timto prikazem vyberu vsechno z tabulky potraviny
-	tabulka_potravin = cur1.fetchall() #tento prikaz vypise vsechny hodnoty v dane tabulce potraviny
+	cur1.execute("SELECT nazev, kj FROM potraviny;") #timto prikazem vyberu nazev a kj z tabulky potraviny
+	tabulka_potravin = cur1.fetchall() #tento prikaz vypise vsechny hodnoty, ktere mam v SELECTU v dane tabulce potraviny
 
 	seznam_potravin = []
 	for i in tabulka_potravin:
