@@ -23,7 +23,7 @@ def informace_web():
 
 	seznam_potravin = []
 	for i in tabulka_potravin:
-		seznam_potravin.append("Nazev potraviny: %s , kj (na 1 gram)	: %i" % (i[0], i[1]))
+		seznam_potravin.append("Nazev potraviny: %s , kj (na 1 gram)	: %i" % (i[0], i[1])) #%s mi říká, že chci text a %i, že chci cislo. Za druhym procentem v [] jsou mista, ktere chci v danem seznamu vypsat (na nultem miste je ten nazev a na prvnim je hodnota kj)
 	
 	return "<br>".join(seznam_potravin)
 
