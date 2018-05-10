@@ -11,45 +11,50 @@ def selecty_z_databaze(select):
 tabulka_potravin = selecty_z_databaze("SELECT p.nazev, p.kj, mj.nazev FROM potraviny p join merna_jednotka mj on p.id_merna_jednotka = mj.id")
 
 
-kj_potrebne = 30
-vybrane_kj = 0
-seznam_vybranych_potravin=[]
-while (vybrane_kj < kj_potrebne and len(tabulka_potravin)!=0):
-	vybrana_potravina = random.choice(tabulka_potravin)
-	tabulka_potravin.remove(vybrana_potravina)
-	vybrana_potravina_nazev = vybrana_potravina[0]
-	vybrana_potravina_kj = vybrana_potravina[1]
-	#print(tabulka_potravin)
 
-	if vybrana_potravina_kj < kj_potrebne - vybrane_kj:
-		seznam_vybranych_potravin.append(vybrana_potravina)
-		vybrane_kj = vybrane_kj + vybrana_potravina_kj
-		print(vybrane_kj)
-	else:
-		continue
+kj_potrebne = 40
 
-print(seznam_vybranych_potravin)
-print(vybrane_kj)
+kj_potrebne_snidane = int(kj_potrebne/100*20)
+kj_potrebne_svacina1 = int(kj_potrebne/100*10)
+kj_potrebne_obed = int(kj_potrebne/100*35)
+kj_potrebne_svacina2 = int(kj_potrebne/100*10)
+kj_potrebne_vecere = int(kj_potrebne/100*25)
 
 
+def vyber_jidla(KJ_k_snedku):
+	vybrane_kj = 0
+	seznam_vybranych_potravin=[]
+	tabulka_potravin_pro_funkci = list(tabulka_potravin) #slovo list je zde pridane, protoze bez toho nam to stale chtelo tahat data z prazdne tabulky
+	
+	while (vybrane_kj < KJ_k_snedku and len(tabulka_potravin_pro_funkci)!=0):
+		vybrana_potravina = random.choice(tabulka_potravin_pro_funkci)
+		tabulka_potravin_pro_funkci.remove(vybrana_potravina)
+		vybrana_potravina_nazev = vybrana_potravina[0]
+		vybrana_potravina_kj = vybrana_potravina[1]
+		#print(tabulka_potravin)
+
+		if vybrana_potravina_kj < KJ_k_snedku - vybrane_kj:
+			seznam_vybranych_potravin.append(vybrana_potravina)
+			vybrane_kj = vybrane_kj + vybrana_potravina_kj
+			print(vybrane_kj)
+		else:
+			continue
+
+	return (vybrane_kj, seznam_vybranych_potravin)
 
 
-#skoncime, kdyz kj_potrebne - suma i je rovno 0 nebo kdyz kj_potrebne - suma i < nez min i
 
+SNIDANE = vyber_jidla(kj_potrebne_snidane)
+print(SNIDANE)
 
+SVACINA1 = vyber_jidla(kj_potrebne_svacina1)
+print(SVACINA1)
 
-	#koukni do seznamu a vyber potravinu s jejich kj.
-	#kj vybrane potraviny vem a odecti je od kj_potrebnych
-	#pokud je i < kj_potrebne vyber potravinu s jejich kj
-	#.
-	#.
-	#kdyz je i > nez kj_potrebne, neber je v potaz
+OBED = vyber_jidla(kj_potrebne_obed)
+print (OBED)
 
-	#kdyz je i nula, vypis seznam potravinu
+SVACINA2 = vyber_jidla(kj_potrebne_svacina2)
+print(SVACINA2)
 
-	#kdyz od kj_potrebnych nejde odecist i, protoze je kj_potrebnych uz malo, 
-	#vypis seznam potravin a napis, ze chybi zbyly pocet kj.
-	#haze to chybu, protoze jsme skoncili na sume 29, 
-	#proto musime do kodu nejak zaclenit, ze se jednotlivy hodnoty, ktery program
-	#videl, napisou do seznamu a program bude koukat jenom na zyble potraviny. Dokud zbyly seznam nebude prazdny
-
+VECERE = vyber_jidla(kj_potrebne_vecere)
+print(VECERE)
