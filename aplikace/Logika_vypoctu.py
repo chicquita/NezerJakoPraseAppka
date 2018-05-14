@@ -32,10 +32,11 @@ def vyber_jidla(KJ_k_snedku):
 		vybrana_potravina_kj = vybrana_potravina[1]
 		#print(tabulka_potravin)
 
-		if vybrana_potravina_kj < KJ_k_snedku - vybrane_kj:
+		if vybrana_potravina_kj <= KJ_k_snedku - vybrane_kj:
 			seznam_vybranych_potravin.append(vybrana_potravina)
 			#tabulka_potravin.remove(vybrana_potravina) #toto zajisti, ze kdyz ze zasob snim banan na snidani, tak uz se mi nenabidne i na obed, protoze jsem ho snedla
 			vybrane_kj = vybrane_kj + vybrana_potravina_kj
+			tabulka_potravin.remove(vybrana_potravina)
 			print(vybrane_kj)
 		
 	return (vybrane_kj, seznam_vybranych_potravin)
