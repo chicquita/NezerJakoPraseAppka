@@ -56,5 +56,8 @@ git checkout -b název větve (ten název si vymyslím) - to mi vytvoří novou 
 git checkout název větve, co jsem si vytvořila - mě hodí do posledního commitu mnou nebo Áďou vytvořené větve.
 
 git merge master - všechny commity v dané větvi, kterou jsem si vytvořila, hodí na konec větve master
+ git branch - to me ukaze, ve ktere jsem zrovna branchi
+delam dal git add, git commit, ale ve chvili, kdy davam git push, tak musim dat git push origin a nazev te vetve!
+
 -------------------------------------------------------------------------------------------------
 
