@@ -2,7 +2,7 @@ import psycopg2
 import random
 
 def initialize_cursor():
-	conn = psycopg2.connect(dbname="****", user="****", password= "****", host="da.stderr.cz") #ted se zacnu pripojovat do dataaze
+	conn = psycopg2.connect(dbname="janicka", user="janicka", password= "Tajne heslo, ktere neni na githubu", host="da.stderr.cz") #ted se zacnu pripojovat do dataaze
 	cur1 = conn.cursor() #pomoci cursoru delam to, co chci delat na databazi
 	 
 	return cur1
@@ -59,7 +59,7 @@ def vyber_jidla(KJ_k_snedku):
 			seznam_vybranych_potravin.append(vybrana_potravina)
 			#tabulka_potravin.remove(vybrana_potravina) #toto zajisti, ze kdyz ze zasob snim banan na snidani, tak uz se mi nenabidne i na obed, protoze jsem ho snedla
 			vybrane_kj = vybrane_kj + vybrana_potravina_kj
-			tabulka_potravin.remove(vybrana_potravina)
+			tabulka_zasob.remove(vybrana_potravina)
 			print(vybrane_kj)
 		
 	return (vybrane_kj, seznam_vybranych_potravin)
@@ -72,7 +72,7 @@ def vyber_jidla(KJ_k_snedku):
 SNIDANE = vyber_jidla(kj_potrebne_snidane)
 print(SNIDANE)
 
-tabulka_potravin = list(tabulka_potravin_tmp)
+#tabulka_potravin = list(tabulka_potravin_tmp)
 SVACINA1 = vyber_jidla(kj_potrebne_svacina1)
 print(SVACINA1)
 
