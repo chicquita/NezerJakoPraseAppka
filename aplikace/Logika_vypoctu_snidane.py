@@ -72,7 +72,7 @@ def vyber_jidla(KJ_k_snedku):
 #tabulka_potravin.remove(lambda id_kategorie: id_kategorie not in [13,40,67,68])
 
 
-kategrie_snidane = {
+kategorie_snidane = {
 	"slane_pecivo":[56, 57],
 	"sladke_pecivo":[58],
 	"jogurty":[26, 27],
@@ -85,10 +85,10 @@ kategrie_snidane = {
 	"napoje":[30, 41, 42, 44, 45, 46]
 }
 
-#kategorie1 = slane_pecivo, sladke_pecivo a jogurty
-#kategorie2 = ovoce, zelenina
-#kategorie3 = prilohy pro slane pecivo, prilohy pro sladke pecivo a prilohy pro jogurty
-#kategorie4 = napoje
+# kosik1 = slane_pecivo, sladke_pecivo a jogurty 50%
+# kosik2 = ovoce, zelenina 20%
+# kosik3 = prilohy pro slane pecivo, prilohy pro sladke pecivo a prilohy pro jogurty 25%
+# kosik4 = napoje 5%
 
 def vyber_zakladni_kosik_snidane ():
 	zakladni_kosik = ["sladke_pecivo", "slane_pecivo", "jogurty"]
@@ -127,7 +127,7 @@ def vyber_jidla_s_nejvice_KJ(seznam_jidel):
 	return max(seznam_jidel, key=lambda x:x[4]) #fce, ktera vrati potravinu s nejvyssi postej KJ
 
 
-def logika_vypoctu(kategorie_ID):
+def logika_vypoctu(kategorie_ID, KJ):
 	vybrane_jidlo = None
 	vybrane_jidlo_2 = None
 	KJ_k_prevedeni = None
@@ -137,8 +137,8 @@ def logika_vypoctu(kategorie_ID):
 	jidla_z_kategorii = vyber_jidla_z_kategorii(kategorie_ID)
 	vybrane_jidlo = vyber_jidla_s_nejvice_KJ(jidla_z_kategorii)
 	
-	if vybrane_jidlo[4] >= kj_potrebne_snidane_K1:
-		pouzita_gramaz = int(vybrane_jidlo[1]*kj_potrebne_snidane_K1)/float(vybrane_jidlo[4])
+	if vybrane_jidlo[4] >= KJ:
+		pouzita_gramaz = int(vybrane_jidlo[1]*KJ)/float(vybrane_jidlo[4])
 		#print(pouzita_gramaz)
 		zbyla_gramaz = vybrane_jidlo[1]-pouzita_gramaz
 		#print(zbyla_gramaz)
@@ -159,17 +159,17 @@ def logika_vypoctu(kategorie_ID):
 		#print(vybrane_jidlo_2)
 		 #timto jsem odebrala tu prvni potravinu, ktera nedostacuje KJ
 
-		if vybrane_jidlo_2[4] >= kj_potrebne_snidane_K1-vybrane_jidlo[4]:
-			pouzita_gramaz_2 = int(vybrane_jidlo_2[1]*(kj_potrebne_snidane_K1-vybrane_jidlo[4]))/float(vybrane_jidlo_2[4])
+		if vybrane_jidlo_2[4] >= KJ-vybrane_jidlo[4]:
+			pouzita_gramaz_2 = int(vybrane_jidlo_2[1]*(KJ-vybrane_jidlo[4]))/float(vybrane_jidlo_2[4])
 			zbyla_gramaz_2 = vybrane_jidlo_2[1]-pouzita_gramaz_2
 			#print(vybrane_jidlo_2)
 			TABULKA_ZASOB.remove(vybrane_jidlo_2)
 			TABULKA_ZASOB.append((vybrane_jidlo_2[0], zbyla_gramaz_2, vybrane_jidlo_2[2], vybrane_jidlo_2[3], zbyla_gramaz_2*float(vybrane_jidlo_2[2]), vybrane_jidlo_2[5]))
 		else:
 			TABULKA_ZASOB.remove(vybrane_jidlo_2)
-			pouzita_gramaz_2 = int(vybrane_jidlo_2[1]*(kj_potrebne_snidane_K1-vybrane_jidlo[4]))/float(vybrane_jidlo_2[4])
+			pouzita_gramaz_2 = int(vybrane_jidlo_2[1]*(KJ-vybrane_jidlo[4]))/float(vybrane_jidlo_2[4])
 			zbyla_gramaz_2 = vybrane_jidlo_2[1]-pouzita_gramaz_2
-			KJ_k_prevedeni = kj_potrebne_snidane_K1-vybrane_jidlo[4]-vybrane_jidlo_2[4]
+			KJ_k_prevedeni = KJ-vybrane_jidlo[4]-vybrane_jidlo_2[4]
 
 	#print(vybrane_jidlo)
 	#print(vybrane_jidlo_2)
@@ -179,4 +179,25 @@ def logika_vypoctu(kategorie_ID):
 	return (vybrane_jidlo, vybrane_jidlo_2, KJ_k_prevedeni, pouzita_gramaz, pouzita_gramaz_2)	
 
 TABULKA_ZASOB = velky_select()
-print(logika_vypoctu(kategrie_snidane["slane_pecivo"]))
+#print(logika_vypoctu(kategorie_snidane["slane_pecivo"], 700))
+
+def vytvor_snidani():
+	zakladni_kosik = vyber_zakladni_kosik_snidane()
+	kosik_2 = "ovoce"
+	if zakladni_kosik is "slane_pecivo":
+		kosik_2 = "zelenina"
+		kosik_3 = "prilohy_pro_slane_pecivo"
+	elif zakladni_kosik is "sladke_pecivo":
+		kosik_3 = "prilohy_pro_sladke_pecivo"
+	else:
+		kosik_3 = "prilohy_pro_jogurty"
+
+	snidane_K1 = logika_vypoctu(kategorie_snidane[zakladni_kosik], kj_potrebne_snidane*0.5)
+	print(snidane_K1)
+	snidane_K2 = logika_vypoctu(kategorie_snidane[kosik_2], kj_potrebne_snidane*0.2)
+	print(snidane_K2)
+	snidane_K3 = logika_vypoctu(kategorie_snidane[kosik_3], kj_potrebne_snidane*0.25)
+	print(snidane_K3)
+	snidane_K4 = logika_vypoctu(kategorie_snidane["napoje"], kj_potrebne_snidane*0.05)
+	print(snidane_K4)
+vytvor_snidani()
