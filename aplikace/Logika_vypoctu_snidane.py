@@ -79,7 +79,7 @@ kategorie_snidane = {
 	"jogurty":[26, 27],
 	"ovoce":[53],
 	"zelenina":[55],
-	"prilohy_pro_slane_pecivo":[63, 62, 52, 37, 36, 35, 34, 33, 32, 31, 
+	"prilohy_pro_slane_pecivo":[63, 62, 52, 37, 35, 34, 33, 32, 31, 
 		28, 27, 26, 22, 21, 20, 18, 17, 16, 14, 12],
 	"prilohy_pro_sladke_pecivo":[67, 66, 65, 64, 54, 52, 48, 27, 26],
 	"prilohy_pro_jogurty":[28, 35, 39, 48, 52, 54, 61, 64, 65, 66, 67],
