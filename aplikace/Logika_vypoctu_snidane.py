@@ -77,11 +77,13 @@ kategorie_snidane = {
 	"slane_pecivo":[56, 57],
 	"sladke_pecivo":[58],
 	"jogurty":[26, 27],
+	"cerealie_vlocky": [70],
 	"ovoce":[53],
 	"zelenina":[55],
 	"prilohy_pro_slane_pecivo":[63, 62, 52, 37, 35, 34, 33, 32, 31, 
 		28, 27, 26, 22, 21, 20, 18, 17, 16, 14, 12],
 	"prilohy_pro_sladke_pecivo":[67, 66, 65, 64, 54, 52, 48, 27, 26],
+	"prilohy_pro_cerealie" :[67, 66, 65, 54, 52, 48, 27, 26],
 	"prilohy_pro_jogurty":[28, 35, 39, 48, 52, 54, 61, 64, 65, 66, 67],
 	"napoje":[30, 41, 42, 44, 45, 46]
 }
@@ -92,7 +94,7 @@ kategorie_snidane = {
 # kosik4 = napoje 5%
 
 def vyber_zakladni_kosik_snidane ():
-	zakladni_kosik = ["sladke_pecivo", "slane_pecivo", "jogurty"]
+	zakladni_kosik = ["sladke_pecivo", "slane_pecivo", "jogurty", "cerealie_vlocky"]
 	return random.choice(zakladni_kosik)
 
 kj_potrebne_snidane_K1 = kj_potrebne_snidane*0.5
@@ -204,6 +206,8 @@ def vytvor_snidani():
 		kosik_3 = "prilohy_pro_slane_pecivo"
 	elif zakladni_kosik is "sladke_pecivo":
 		kosik_3 = "prilohy_pro_sladke_pecivo"
+	elif zakladni_kosik is "cerealie_vlocky":
+		kosik_3 = "prilohy_pro_cerealie"
 	else:
 		kosik_3 = "prilohy_pro_jogurty"
 
