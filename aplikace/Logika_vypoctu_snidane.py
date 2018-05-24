@@ -38,7 +38,8 @@ tabulka_zasob = select_all(
 denni_prijem_kj = select_single_value("SELECT u.denni_prijem_kj FROM uzivatel u WHERE id = 1")
 #print(denni_prijem_kj)
 
-kj_potrebne_snidane = int(denni_prijem_kj/100*20)			# doporucene rozlozeni chodu: snidane 20-25%
+kj_potrebne_snidane = int(denni_prijem_kj/100*20)
+#kj_potrebne_snidane = 100000															# doporucene rozlozeni chodu: snidane 20-25%
 kj_potrebne_svacina1 = int(denni_prijem_kj/100*10)			# svacina 10-15%
 kj_potrebne_obed = int(denni_prijem_kj/100*35)				# obed 30-35%
 kj_potrebne_svacina2 = int(denni_prijem_kj/100*15)			# svacina 10-15%
@@ -95,7 +96,7 @@ def vyber_zakladni_kosik_snidane ():
 	return random.choice(zakladni_kosik)
 
 kj_potrebne_snidane_K1 = kj_potrebne_snidane*0.5
-#kj_potrebne_snidane_K1 = 20000
+#kj_potrebne_snidane_K1 = 2000000
 
 print("KJ potrebne ke snidani: {}".format(kj_potrebne_snidane))
 print("KJ potrebne ke snidani K1: {}".format(kj_potrebne_snidane_K1))
@@ -146,11 +147,10 @@ def logika_vypoctu(kategorie_ID, KJ, max_pocet_potravin=None):
 	# kdyby to nebylo definovane, muze to hazet chybu, protoze ta tabulka je
 	# strasne kratka a pritom jsme nezaplnili potrebne KJ, takze ono by se to 
 	# snazilo porad pokracovat dal a nezastavilo by se to. 
-
-	#p.nazev, z.baleni, p.kj, mj.zkratka, z.baleni * p.kj, p.id_kategorie
-
+	
 	while KJ >= spotrebovane_KJ and pocet_potravin < max_pocet_potravin:
 		vybrane_jidlo = vyber_jidla_s_nejvice_KJ(jidla_z_kategorii)
+		pocet_potravin += 1
 		jidlo = {
 			"nazev" : vybrane_jidlo[0],
 			"baleni" : vybrane_jidlo[1],
@@ -159,7 +159,7 @@ def logika_vypoctu(kategorie_ID, KJ, max_pocet_potravin=None):
 			"vysledne_KJ" : vybrane_jidlo[4]
 		}
 
-		if jidlo["vysledne_KJ"] >= KJ - spotrebovane_KJ:
+		if jidlo["vysledne_KJ"] >= KJ - float(spotrebovane_KJ):
 			# tady řešíme možnost, že vybrané jídlo má hned na první pokus více KJ než potřebných
 			pouzita_gramaz = int(int(jidlo["baleni"]*KJ)/float(jidlo["vysledne_KJ"]))
 			#print(pouzita_gramaz)
@@ -179,9 +179,11 @@ def logika_vypoctu(kategorie_ID, KJ, max_pocet_potravin=None):
 		else:
 			#ted mame nedostatek KJ, tak chceme vybrat jidlo s nejvice KJ a pouzit ho do naseho vyberu
 			spotrebovane_KJ = jidlo["vysledne_KJ"] + spotrebovane_KJ
+			print(vybrane_jidlo)
 			TABULKA_ZASOB.remove(vybrane_jidlo)
+			jidla_z_kategorii.remove(vybrane_jidlo)
 			jidelnicek.append((jidlo["nazev"], jidlo["baleni"], jidlo["jednotka"], jidlo["vysledne_KJ"]))
-			KJ_k_prevedeni = KJ_k_prevedeni + (KJ - spotrebovane_KJ)
+			KJ_k_prevedeni = KJ_k_prevedeni + (KJ - float(spotrebovane_KJ))
 					
 
 	#print(vybrane_jidlo)
@@ -205,7 +207,7 @@ def vytvor_snidani():
 	else:
 		kosik_3 = "prilohy_pro_jogurty"
 
-	snidane_K1 = logika_vypoctu(kategorie_snidane[zakladni_kosik], kj_potrebne_snidane*0.5)
+	snidane_K1 = logika_vypoctu(kategorie_snidane[zakladni_kosik], kj_potrebne_snidane*0.5, 2)
 	print(snidane_K1)
 	snidane_K2 = logika_vypoctu(kategorie_snidane[kosik_2], kj_potrebne_snidane*0.2)
 	print(snidane_K2)
