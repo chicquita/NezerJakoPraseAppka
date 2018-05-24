@@ -127,56 +127,69 @@ def vyber_jidla_s_nejvice_KJ(seznam_jidel):
 	return max(seznam_jidel, key=lambda x:x[4]) #fce, ktera vrati potravinu s nejvyssi postej KJ
 
 
-def logika_vypoctu(kategorie_ID, KJ):
+def logika_vypoctu(kategorie_ID, KJ, max_pocet_potravin=None):
+	#max_pocet_potravin - je ten, ktery si definuju u jednotlivych kosicku (např. u K1 chci max dve ruzne potraviny, ale jako vychozi hodnota fce je nekonecno)
 	vybrane_jidlo = None
-	vybrane_jidlo_2 = None
 	KJ_k_prevedeni = None
 	pouzita_gramaz = None
-	pouzita_gramaz_2 = None
+	spotrebovane_KJ = 0
+	pocet_potravin = 0
+	jidelnicek = []
+	KJ_k_prevedeni = 0
 
 	jidla_z_kategorii = vyber_jidla_z_kategorii(kategorie_ID)
-	vybrane_jidlo = vyber_jidla_s_nejvice_KJ(jidla_z_kategorii)
 	
-	if vybrane_jidlo[4] >= KJ:
-		pouzita_gramaz = int(vybrane_jidlo[1]*KJ)/float(vybrane_jidlo[4])
-		#print(pouzita_gramaz)
-		zbyla_gramaz = vybrane_jidlo[1]-pouzita_gramaz
-		#print(zbyla_gramaz)
-		TABULKA_ZASOB.remove(vybrane_jidlo)
-		TABULKA_ZASOB.append((vybrane_jidlo[0], zbyla_gramaz, vybrane_jidlo[2], vybrane_jidlo[3], zbyla_gramaz*float(vybrane_jidlo[2]), vybrane_jidlo[5]))
-		'''
-		Tady jsem z tabulky musela smazat vybrane jidlo, ktere jsem pouzila, 
-		ale pokud ta gramaz byla vetsi nez pozadovana, tak jsem si do tabulky
-		nazpet hodila novy zaznam, kde je ponizena gramaz a KJ. Protoze je v 
-		seznamu.append vice kriterii, musela jsem tam pouzit dve zavorky - 
-		ty mi rikaji, ze jsem pridala jeden tuple do seznamu.
-		'''
-	else:
-		#ted mame nedostatek KJ, tak chceme vybrat jidlo s nejvice KJ jeste jednou a pouzit ho do naseho vyberu
-		TABULKA_ZASOB.remove(vybrane_jidlo)
-		jidla_z_kategorii_2 = vyber_jidla_z_kategorii(kategorie_ID) #protoze se fce odvolava na vyber jidla z kategorii, museli jsme udelat i 2, protoze jinak se dane jidlo s nejvyssimi KJ smazalo z TABULKY_ZASOB, tak je potreba ji znovu nacist( uz bez te smazane potraviny)
-		vybrane_jidlo_2 = vyber_jidla_s_nejvice_KJ(jidla_z_kategorii_2)
-		#print(vybrane_jidlo_2)
-		 #timto jsem odebrala tu prvni potravinu, ktera nedostacuje KJ
+	if max_pocet_potravin is None:
+		max_pocet_potravin = len(jidla_z_kategorii)
+	# tento if tady mam, protoze u nekterych kosicku (napr. ovoce nebo zelenina)
+	# je mi jedno, jestli mi to vybere 20 druhu ovoce nebo zeleniny
+	# kdyby to nebylo definovane, muze to hazet chybu, protoze ta tabulka je
+	# strasne kratka a pritom jsme nezaplnili potrebne KJ, takze ono by se to 
+	# snazilo porad pokracovat dal a nezastavilo by se to. 
 
-		if vybrane_jidlo_2[4] >= KJ-vybrane_jidlo[4]:
-			pouzita_gramaz_2 = int(vybrane_jidlo_2[1]*(KJ-vybrane_jidlo[4]))/float(vybrane_jidlo_2[4])
-			zbyla_gramaz_2 = vybrane_jidlo_2[1]-pouzita_gramaz_2
-			#print(vybrane_jidlo_2)
-			TABULKA_ZASOB.remove(vybrane_jidlo_2)
-			TABULKA_ZASOB.append((vybrane_jidlo_2[0], zbyla_gramaz_2, vybrane_jidlo_2[2], vybrane_jidlo_2[3], zbyla_gramaz_2*float(vybrane_jidlo_2[2]), vybrane_jidlo_2[5]))
+	#p.nazev, z.baleni, p.kj, mj.zkratka, z.baleni * p.kj, p.id_kategorie
+
+	while KJ >= spotrebovane_KJ and pocet_potravin < max_pocet_potravin:
+		vybrane_jidlo = vyber_jidla_s_nejvice_KJ(jidla_z_kategorii)
+		jidlo = {
+			"nazev" : vybrane_jidlo[0],
+			"baleni" : vybrane_jidlo[1],
+			"KJ_na_gram_kus" : vybrane_jidlo[2],
+			"jednotka" : vybrane_jidlo[3],
+			"vysledne_KJ" : vybrane_jidlo[4]
+		}
+
+		if jidlo["vysledne_KJ"] >= KJ - spotrebovane_KJ:
+			# tady řešíme možnost, že vybrané jídlo má hned na první pokus více KJ než potřebných
+			pouzita_gramaz = int(int(jidlo["baleni"]*KJ)/float(jidlo["vysledne_KJ"]))
+			#print(pouzita_gramaz)
+			zbyla_gramaz = jidlo["baleni"]-pouzita_gramaz
+			#print(zbyla_gramaz)
+			TABULKA_ZASOB.remove(vybrane_jidlo)
+			TABULKA_ZASOB.append((jidlo["nazev"], zbyla_gramaz, jidlo["KJ_na_gram_kus"], jidlo["jednotka"], zbyla_gramaz*float(vybrane_jidlo[2]), vybrane_jidlo[5]))
+			jidelnicek.append((jidlo["nazev"], pouzita_gramaz, jidlo["jednotka"], pouzita_gramaz * int(jidlo["KJ_na_gram_kus"])))
+			break	
+		
+		# Tady jsem z tabulky musela smazat vybrane jidlo, ktere jsem pouzila, 
+		# ale pokud ta gramaz byla vetsi nez pozadovana, tak jsem si do tabulky
+		# nazpet hodila novy zaznam, kde je ponizena gramaz a KJ. Protoze je v 
+		# seznamu.append vice kriterii, musela jsem tam pouzit dve zavorky - 
+		# ty mi rikaji, ze jsem pridala jeden tuple do seznamu.
+		
 		else:
-			TABULKA_ZASOB.remove(vybrane_jidlo_2)
-			pouzita_gramaz_2 = int(vybrane_jidlo_2[1]*(KJ-vybrane_jidlo[4]))/float(vybrane_jidlo_2[4])
-			zbyla_gramaz_2 = vybrane_jidlo_2[1]-pouzita_gramaz_2
-			KJ_k_prevedeni = KJ-vybrane_jidlo[4]-vybrane_jidlo_2[4]
+			#ted mame nedostatek KJ, tak chceme vybrat jidlo s nejvice KJ a pouzit ho do naseho vyberu
+			spotrebovane_KJ = jidlo["vysledne_KJ"] + spotrebovane_KJ
+			TABULKA_ZASOB.remove(vybrane_jidlo)
+			jidelnicek.append((jidlo["nazev"], jidlo["baleni"], jidlo["jednotka"], jidlo["vysledne_KJ"]))
+			KJ_k_prevedeni = KJ_k_prevedeni + (KJ - spotrebovane_KJ)
+					
 
 	#print(vybrane_jidlo)
 	#print(vybrane_jidlo_2)
 	#print(zbyla_gramaz_2)
 	#print(pouzita_gramaz_2)
 	#print(KJ_k_prevedeni)
-	return (vybrane_jidlo, vybrane_jidlo_2, KJ_k_prevedeni, pouzita_gramaz, pouzita_gramaz_2)	
+	return (KJ_k_prevedeni, jidelnicek)
 
 TABULKA_ZASOB = velky_select()
 #print(logika_vypoctu(kategorie_snidane["slane_pecivo"], 700))
