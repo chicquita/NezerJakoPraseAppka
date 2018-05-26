@@ -82,7 +82,7 @@ kategorie_snidane = {
 	"zelenina":[55],
 	"prilohy_pro_slane_pecivo":[63, 62, 52, 37, 35, 34, 33, 32, 31, 
 		28, 27, 26, 22, 21, 20, 18, 17, 16, 14, 12],
-	"prilohy_pro_sladke_pecivo":[67, 66, 65, 64, 54, 52, 48, 27, 26],
+	"prilohy_pro_sladke_pecivo":[67, 66, 64, 54, 52, 48, 27, 26],
 	"prilohy_pro_cerealie" :[67, 66, 65, 54, 52, 48, 27, 26],
 	"prilohy_pro_jogurty":[28, 35, 39, 48, 52, 54, 61, 64, 65, 66, 67],
 	"napoje":[30, 41, 42, 44, 45, 46]
@@ -93,15 +93,11 @@ kategorie_snidane = {
 # kosik3 = prilohy pro slane pecivo, prilohy pro sladke pecivo a prilohy pro jogurty 25%
 # kosik4 = napoje 5%
 
-def vyber_zakladni_kosik_snidane ():
-	zakladni_kosik = ["sladke_pecivo", "slane_pecivo", "jogurty", "cerealie_vlocky"]
+def vyber_zakladni_kosik (zakladni_kosik):
 	return random.choice(zakladni_kosik)
 
 kj_potrebne_snidane_K1 = kj_potrebne_snidane*0.5
 #kj_potrebne_snidane_K1 = 2000000
-
-print("KJ potrebne ke snidani: {}".format(kj_potrebne_snidane))
-print("KJ potrebne ke snidani K1: {}".format(kj_potrebne_snidane_K1))
 
 
 def velky_select():
@@ -181,7 +177,7 @@ def logika_vypoctu(kategorie_ID, KJ, max_pocet_potravin=None):
 		else:
 			#ted mame nedostatek KJ, tak chceme vybrat jidlo s nejvice KJ a pouzit ho do naseho vyberu
 			spotrebovane_KJ = jidlo["vysledne_KJ"] + spotrebovane_KJ
-			print(vybrane_jidlo)
+			#print(vybrane_jidlo)
 			TABULKA_ZASOB.remove(vybrane_jidlo)
 			jidla_z_kategorii.remove(vybrane_jidlo)
 			jidelnicek.append((jidlo["nazev"], jidlo["baleni"], jidlo["jednotka"], jidlo["vysledne_KJ"]))
@@ -198,8 +194,11 @@ def logika_vypoctu(kategorie_ID, KJ, max_pocet_potravin=None):
 TABULKA_ZASOB = velky_select()
 #print(logika_vypoctu(kategorie_snidane["slane_pecivo"], 700))
 
+print("KJ potrebne ke snidani: {}".format(kj_potrebne_snidane))
+#print("KJ potrebne ke snidani K1: {}".format(kj_potrebne_snidane_K1))
+
 def vytvor_snidani():
-	zakladni_kosik = vyber_zakladni_kosik_snidane()
+	zakladni_kosik = vyber_zakladni_kosik (["sladke_pecivo", "slane_pecivo", "jogurty", "cerealie_vlocky"])
 	kosik_2 = "ovoce"
 	if zakladni_kosik is "slane_pecivo":
 		kosik_2 = "zelenina"
@@ -220,3 +219,107 @@ def vytvor_snidani():
 	snidane_K4 = logika_vypoctu(kategorie_snidane["napoje"], kj_potrebne_snidane*0.05)
 	print(snidane_K4)
 vytvor_snidani()
+
+
+
+
+
+
+kategorie_obed = {
+	"maso_rostlinne_alternativy_syra":[13, 15, 23, 25, 62],
+	"prilohy_k_masu_nebo_rostl_alt_syra":[10, 78, 81, 79],
+	"ryby":[19],
+	"prilohy_k_rybam" :[10, 79],
+	"hotove_jidlo_hodi_se_knedliky": [80],
+	"prilohy_k_hotove_jidlo_hodi_se_knedliky":[77],
+	"hotove_jidlo_hodi_se_knedliky_nebo_testoviny":[82],
+	"prilohy_k_hotove_jidlo_hodi_se_knedliky_nebo_testoviny":[77, 78],
+	"hotove_jidlo_potreba_priloha":[3, 4],
+	"prilohy_hotove_jidlo_potreba_priloha" :[10],
+	"hotove_jidlo_netreba_priloha":[72, 73],
+	"hotove_jidlo_sladke" : [71],
+	"lusteniny" :[50],
+	"prilohy_k_lusteninam": [14, 16, 22],
+	"mc_donald":[5],
+	"pizza":[6],
+	"piti" : [41, 42, 43, 44, 45, 46],
+	"salaty" : [51, 55, 69],
+	"prilohy_k_salatum" : [13, 15, 62, 19, 24, 25, 18, 22, 31, 32, 34],
+	"testoviny" : [78, 85],
+	"prilohy_k_testovinam" : [13, 15, 62, 19, 23, 24, 25, 47, 18, 19, 22, 31, 32, 34],
+	"ovoce" : [53]
+}
+
+print("KJ potrebne ke obedu: {}".format(kj_potrebne_obed))
+
+
+def vytvor_obed ():
+	seznam_hlavnich_jidel = ["maso_rostlinne_alternativy_syra","ryby", 
+	"hotove_jidlo_hodi_se_knedliky", "hotove_jidlo_hodi_se_knedliky_nebo_testoviny",
+	"hotove_jidlo_potreba_priloha", "hotove_jidlo_netreba_priloha",
+	"hotove_jidlo_sladke", "lusteniny", "mc_donald", "pizza", "salaty", "testoviny"]
+	zakladni_kosik = vyber_zakladni_kosik (seznam_hlavnich_jidel)
+	if zakladni_kosik is "maso_rostlinne_alternativy_syra":
+		priloha = "prilohy_k_masu_nebo_rostl_alt_syra"
+	elif zakladni_kosik is "ryby":
+		priloha = "prilohy_k_rybam"
+	elif zakladni_kosik is "hotove_jidlo_hodi_se_knedliky":
+		priloha = "prilohy_k_hotove_jidlo_hodi_se_knedliky"
+	elif zakladni_kosik is "hotove_jidlo_hodi_se_knedliky_nebo_testoviny":
+		priloha = "prilohy_k_hotove_jidlo_hodi_se_knedliky_nebo_testoviny"
+	elif zakladni_kosik is "hotove_jidlo_potreba_priloha":
+		priloha = "prilohy_hotove_jidlo_potreba_priloha"
+	elif zakladni_kosik is "hotove_jidlo_netreba_priloha":
+		priloha = None
+	elif zakladni_kosik is "hotove_jidlo_sladke":
+		priloha = None
+	elif zakladni_kosik is "lusteniny":
+		priloha = "prilohy_k_lusteninam"
+	elif zakladni_kosik is "mc_donald":
+		priloha = None
+	elif zakladni_kosik is "pizza":
+		priloha = None
+	elif zakladni_kosik is "salaty":
+		priloha = "prilohy_k_salatum"
+	elif zakladni_kosik is "testoviny":
+		priloha = "prilohy_k_testovinam"
+
+	
+
+	if priloha is not None:
+		KJ = 0.5
+	else:
+		KJ = 0.8
+	obed_K1 = logika_vypoctu(kategorie_obed[zakladni_kosik], kj_potrebne_obed*KJ)
+	print(obed_K1)
+
+	obed_K2 = []
+	if priloha is not None:
+		obed_K2 = logika_vypoctu(kategorie_obed[priloha], kj_potrebne_obed*0.3)
+	print(obed_K2)
+
+	
+	if zakladni_kosik is not "hotove_jidlo_sladke":
+		zelenina_ovoce = "salaty"
+	else:
+		zelenina_ovoce = "ovoce"
+
+	obed_K3 = []
+	if zakladni_kosik is not "salaty":
+		obed_K3 = logika_vypoctu(kategorie_obed[zelenina_ovoce], kj_potrebne_obed*0.2)
+	print(obed_K3)
+
+
+
+vytvor_obed()
+
+
+
+
+
+
+
+#kdyz to vybere kategorii, kde nic nemam v zasobach, musi to vybrat jinou kategorii!!!!
+# opravit salaty!!!!
+# krati to porce u veci, co jsou na kus (chce to vzit napr 0,8 ks, coz se zaokrouhlenim 
+#vypise jako nula a pak se i kalorie nasobi nulou,takze vychazi nula )
