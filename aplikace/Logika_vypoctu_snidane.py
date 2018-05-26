@@ -93,8 +93,15 @@ kategorie_snidane = {
 # kosik3 = prilohy pro slane pecivo, prilohy pro sladke pecivo a prilohy pro jogurty 25%
 # kosik4 = napoje 5%
 
-def vyber_zakladni_kosik (zakladni_kosik):
-	return random.choice(zakladni_kosik)
+def vyber_zakladni_kosik (zakladni_kosiky, kategorie):
+	vyber = list(zakladni_kosiky) #musel se tam dělat vyber, coz je kopie zakladnich kosicku, protoze kdyz jsme pozdeji delali remove ze zakladnich kosicku, tak se tam ztratily nejake kategorie (ta fce se podivala na to misto, kde smazala prazdnou kategorii, ale tim, ze se smazala, se ty kategorie o jedno posunuly a fce potom prehlizela nove kategorie, ktere byly na pozici te removnute)
+	for i in zakladni_kosiky:
+		idcka = kategorie[i]
+		pocet_jidel = len(vyber_jidla_z_kategorii(idcka))
+		if pocet_jidel == 0 :
+			vyber.remove(i)
+			
+	return random.choice(vyber)
 
 kj_potrebne_snidane_K1 = kj_potrebne_snidane*0.5
 #kj_potrebne_snidane_K1 = 2000000
@@ -198,7 +205,7 @@ print("KJ potrebne ke snidani: {}".format(kj_potrebne_snidane))
 #print("KJ potrebne ke snidani K1: {}".format(kj_potrebne_snidane_K1))
 
 def vytvor_snidani():
-	zakladni_kosik = vyber_zakladni_kosik (["sladke_pecivo", "slane_pecivo", "jogurty", "cerealie_vlocky"])
+	zakladni_kosik = vyber_zakladni_kosik (["sladke_pecivo", "slane_pecivo", "jogurty", "cerealie_vlocky"], kategorie_snidane)
 	kosik_2 = "ovoce"
 	if zakladni_kosik is "slane_pecivo":
 		kosik_2 = "zelenina"
@@ -258,7 +265,8 @@ def vytvor_obed ():
 	"hotove_jidlo_hodi_se_knedliky", "hotove_jidlo_hodi_se_knedliky_nebo_testoviny",
 	"hotove_jidlo_potreba_priloha", "hotove_jidlo_netreba_priloha",
 	"hotove_jidlo_sladke", "lusteniny", "mc_donald", "pizza", "salaty", "testoviny"]
-	zakladni_kosik = vyber_zakladni_kosik (seznam_hlavnich_jidel)
+	zakladni_kosik = vyber_zakladni_kosik (seznam_hlavnich_jidel, kategorie_obed)
+	#print(zakladni_kosik)
 	if zakladni_kosik is "maso_rostlinne_alternativy_syra":
 		priloha = "prilohy_k_masu_nebo_rostl_alt_syra"
 	elif zakladni_kosik is "ryby":
