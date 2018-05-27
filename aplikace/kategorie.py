@@ -1,6 +1,6 @@
 # toto je soubor, ktery bych v budoucnu chtela naimplementovat primo do 
 # databaze, ale z casovych duvodu je to prozatim tady.
-
+TABULKA_ZASOB = []
 
 snidane = {
 	"slane_pecivo":[56, 57],
