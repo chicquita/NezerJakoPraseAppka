@@ -2,6 +2,7 @@
 # v rámci snídaně a jejich procentuelní zastoupení
 import psycopg2
 import random
+import kategorie
 
 def initialize_cursor():
 	conn = psycopg2.connect(dbname="janicka", user="janicka", password= "Tajne heslo, ktere neni na githubu", host="da.stderr.cz") #ted se zacnu pripojovat do dataaze
@@ -13,7 +14,7 @@ def initialize_cursor():
 # tyto (a casem) i vice funkci si  muzeme ulozit do balicku, ktery si vzdy importujeme (napr. jako vyse import random) a nemusi nam zbytecne zahlcovat kod
 
 def select_all(select):				# kdyz budes dal psat kod a budes tahat neco selectama, zamysli se, jestli vysledek bude
-	cursor = initialize_cursor()		#  1) matice (napr. cela tabulka zasob) - odvolavas se na funkci select_all
+	cursor = initialize_cursor()	#  1) matice (napr. cela tabulka zasob) - odvolavas se na funkci select_all
 	cursor.execute(select)			#  2) jeden radek (napr. select * from zasoby WHERE id = 1) - odvolej se na funkci nize select_single_row
 	return cursor.fetchall() 		#  3) nebo pouze 1 hodnota (napr. nize kdyz selectuju denni_prijem_kj), jedna hodnota je prusecikem jednoho radku a jednoho sloupce, odvolej se na funkci select_single_value
 
@@ -72,26 +73,6 @@ def vyber_jidla(KJ_k_snedku):
 #tabulka_potravin = [x for x in tabulka_potravin if x.id_kategorie != 13]
 #tabulka_potravin.remove(lambda id_kategorie: id_kategorie not in [13,40,67,68])
 
-
-kategorie_snidane = {
-	"slane_pecivo":[56, 57],
-	"sladke_pecivo":[58],
-	"jogurty":[26, 27],
-	"cerealie_vlocky": [70],
-	"ovoce":[53],
-	"zelenina":[55],
-	"prilohy_pro_slane_pecivo":[63, 62, 52, 37, 35, 34, 33, 32, 31, 
-		28, 27, 26, 22, 21, 20, 18, 17, 16, 14, 12],
-	"prilohy_pro_sladke_pecivo":[67, 66, 64, 54, 52, 48, 27, 26],
-	"prilohy_pro_cerealie" :[67, 66, 65, 54, 52, 48, 27, 26],
-	"prilohy_pro_jogurty":[28, 35, 39, 48, 52, 54, 61, 64, 65, 66, 67],
-	"napoje":[30, 41, 42, 44, 45, 46]
-}
-
-# kosik1 = slane_pecivo, sladke_pecivo a jogurty 50%
-# kosik2 = ovoce, zelenina 20%
-# kosik3 = prilohy pro slane pecivo, prilohy pro sladke pecivo a prilohy pro jogurty 25%
-# kosik4 = napoje 5%
 
 def vyber_zakladni_kosik (zakladni_kosiky, kategorie):
 	vyber = list(zakladni_kosiky) #musel se tam dělat vyber, coz je kopie zakladnich kosicku, protoze kdyz jsme pozdeji delali remove ze zakladnich kosicku, tak se tam ztratily nejake kategorie (ta fce se podivala na to misto, kde smazala prazdnou kategorii, ale tim, ze se smazala, se ty kategorie o jedno posunuly a fce potom prehlizela nove kategorie, ktere byly na pozici te removnute)
@@ -205,7 +186,8 @@ print("KJ potrebne ke snidani: {}".format(kj_potrebne_snidane))
 #print("KJ potrebne ke snidani K1: {}".format(kj_potrebne_snidane_K1))
 
 def vytvor_snidani():
-	zakladni_kosik = vyber_zakladni_kosik (["sladke_pecivo", "slane_pecivo", "jogurty", "cerealie_vlocky"], kategorie_snidane)
+	zakladni_kosik = vyber_zakladni_kosik (["sladke_pecivo", "slane_pecivo", 
+		"jogurty", "cerealie_vlocky"], kategorie.snidane)
 	kosik_2 = "ovoce"
 	if zakladni_kosik is "slane_pecivo":
 		kosik_2 = "zelenina"
@@ -217,45 +199,19 @@ def vytvor_snidani():
 	else:
 		kosik_3 = "prilohy_pro_jogurty"
 
-	snidane_K1 = logika_vypoctu(kategorie_snidane[zakladni_kosik], kj_potrebne_snidane*0.5, 2)
+	snidane_K1 = logika_vypoctu(kategorie.snidane[zakladni_kosik], 
+		kj_potrebne_snidane*0.5, 2)
 	print(snidane_K1)
-	snidane_K2 = logika_vypoctu(kategorie_snidane[kosik_2], kj_potrebne_snidane*0.2)
+	snidane_K2 = logika_vypoctu(kategorie.snidane[kosik_2], 
+		kj_potrebne_snidane*0.2)
 	print(snidane_K2)
-	snidane_K3 = logika_vypoctu(kategorie_snidane[kosik_3], kj_potrebne_snidane*0.25)
+	snidane_K3 = logika_vypoctu(kategorie.snidane[kosik_3], 
+		kj_potrebne_snidane*0.25)
 	print(snidane_K3)
-	snidane_K4 = logika_vypoctu(kategorie_snidane["napoje"], kj_potrebne_snidane*0.05)
+	snidane_K4 = logika_vypoctu(kategorie.snidane["napoje"], 
+		kj_potrebne_snidane*0.05)
 	print(snidane_K4)
 vytvor_snidani()
-
-
-
-
-
-
-kategorie_obed = {
-	"maso_rostlinne_alternativy_syra":[13, 15, 23, 25, 62],
-	"prilohy_k_masu_nebo_rostl_alt_syra":[10, 78, 81, 79],
-	"ryby":[19],
-	"prilohy_k_rybam" :[10, 79],
-	"hotove_jidlo_hodi_se_knedliky": [80],
-	"prilohy_k_hotove_jidlo_hodi_se_knedliky":[77],
-	"hotove_jidlo_hodi_se_knedliky_nebo_testoviny":[82],
-	"prilohy_k_hotove_jidlo_hodi_se_knedliky_nebo_testoviny":[77, 78],
-	"hotove_jidlo_potreba_priloha":[3, 4],
-	"prilohy_hotove_jidlo_potreba_priloha" :[10],
-	"hotove_jidlo_netreba_priloha":[72, 73],
-	"hotove_jidlo_sladke" : [71],
-	"lusteniny" :[50],
-	"prilohy_k_lusteninam": [14, 16, 22],
-	"mc_donald":[5],
-	"pizza":[6],
-	"piti" : [41, 42, 43, 44, 45, 46],
-	"salaty" : [51, 55, 69],
-	"prilohy_k_salatum" : [13, 15, 62, 19, 24, 25, 18, 22, 31, 32, 34],
-	"testoviny" : [78, 85],
-	"prilohy_k_testovinam" : [13, 15, 62, 19, 23, 24, 25, 47, 18, 19, 22, 31, 32, 34],
-	"ovoce" : [53]
-}
 
 print("KJ potrebne ke obedu: {}".format(kj_potrebne_obed))
 
@@ -264,8 +220,10 @@ def vytvor_obed ():
 	seznam_hlavnich_jidel = ["maso_rostlinne_alternativy_syra","ryby", 
 	"hotove_jidlo_hodi_se_knedliky", "hotove_jidlo_hodi_se_knedliky_nebo_testoviny",
 	"hotove_jidlo_potreba_priloha", "hotove_jidlo_netreba_priloha",
-	"hotove_jidlo_sladke", "lusteniny", "mc_donald", "pizza", "salaty", "testoviny"]
-	zakladni_kosik = vyber_zakladni_kosik (seznam_hlavnich_jidel, kategorie_obed)
+	"hotove_jidlo_sladke", "lusteniny", "mc_donald", "pizza", "salaty", 
+	"testoviny"]
+	zakladni_kosik = vyber_zakladni_kosik (seznam_hlavnich_jidel, 
+		kategorie.obed)
 	#print(zakladni_kosik)
 	if zakladni_kosik is "maso_rostlinne_alternativy_syra":
 		priloha = "prilohy_k_masu_nebo_rostl_alt_syra"
@@ -298,12 +256,14 @@ def vytvor_obed ():
 		KJ = 0.5
 	else:
 		KJ = 0.8
-	obed_K1 = logika_vypoctu(kategorie_obed[zakladni_kosik], kj_potrebne_obed*KJ)
+	obed_K1 = logika_vypoctu(kategorie.obed[zakladni_kosik], 
+		kj_potrebne_obed*KJ)
 	print(obed_K1)
 
 	obed_K2 = []
 	if priloha is not None:
-		obed_K2 = logika_vypoctu(kategorie_obed[priloha], kj_potrebne_obed*0.3)
+		obed_K2 = logika_vypoctu(kategorie.obed[priloha], 
+			kj_potrebne_obed*0.3)
 	print(obed_K2)
 
 	
@@ -314,7 +274,8 @@ def vytvor_obed ():
 
 	obed_K3 = []
 	if zakladni_kosik is not "salaty":
-		obed_K3 = logika_vypoctu(kategorie_obed[zelenina_ovoce], kj_potrebne_obed*0.2)
+		obed_K3 = logika_vypoctu(kategorie.obed[zelenina_ovoce], 
+			kj_potrebne_obed*0.2)
 	print(obed_K3)
 
 
