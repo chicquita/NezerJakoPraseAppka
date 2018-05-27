@@ -175,17 +175,17 @@ def vytvor_snidani(kj_potrebne_snidane):
 
 	snidane_K1 = logika_vypoctu(kategorie.snidane[zakladni_kosik], 
 		kj_potrebne_snidane*0.5, 2)
-	print(snidane_K1)
 	snidane_K2 = logika_vypoctu(kategorie.snidane[kosik_2], 
 		kj_potrebne_snidane*0.2 + snidane_K1[0])
-	print(snidane_K2)
 	snidane_K3 = logika_vypoctu(kategorie.snidane[kosik_3], 
 		kj_potrebne_snidane*0.25 + snidane_K2[0])
-	print(snidane_K3)
 	snidane_K4 = logika_vypoctu(kategorie.snidane["napoje"], 
 		kj_potrebne_snidane*0.05 + snidane_K3[0])
-	print(snidane_K4)
-	print(snidane_K4[0])
+	zbyle_KJ_z_kategorie = snidane_K4[0]
+	return(zbyle_KJ_z_kategorie, snidane_K1[1] + snidane_K2[1] + 
+		snidane_K3[1] + snidane_K4[1])
+
+
 
 def vytvor_obed (kj_potrebne_obed):
 	seznam_hlavnich_jidel = ["maso_rostlinne_alternativy_syra","ryby", 
@@ -229,22 +229,23 @@ def vytvor_obed (kj_potrebne_obed):
 		KJ = 0.8
 	obed_K1 = logika_vypoctu(kategorie.obed[zakladni_kosik], 
 		kj_potrebne_obed*KJ)
-	print(obed_K1)
 
-	obed_K2 = []
 	if priloha is not None:
 		obed_K2 = logika_vypoctu(kategorie.obed[priloha], 
-			kj_potrebne_obed*0.3)
-	print(obed_K2)
-
+			kj_potrebne_obed*0.3 + obed_K1[0])
+	else:
+		obed_K2 = (obed_K1[0],[])
 	
 	if zakladni_kosik is not "hotove_jidlo_sladke":
 		zelenina_ovoce = "salaty"
 	else:
 		zelenina_ovoce = "ovoce"
 
-	obed_K3 = []
 	if zakladni_kosik is not "salaty":
 		obed_K3 = logika_vypoctu(kategorie.obed[zelenina_ovoce], 
-			kj_potrebne_obed*0.2)
-	print(obed_K3)
+			kj_potrebne_obed*0.2 + obed_K2[0])
+	else:
+		obed_K3 = (obed_K2[0],[])
+
+	zbyle_KJ_z_kategorie = obed_K3[0]
+	return(zbyle_KJ_z_kategorie, obed_K1[1] + obed_K2[1] + obed_K3[1])

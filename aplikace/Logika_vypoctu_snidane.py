@@ -21,11 +21,13 @@ kategorie.TABULKA_ZASOB = funkce.velky_select()
 
 print("KJ potrebne ke snidani: {}".format(kj_potrebne_snidane))
 
-funkce.vytvor_snidani(kj_potrebne_snidane)
+snidane = funkce.vytvor_snidani(kj_potrebne_snidane)
+print(snidane)
 
 print("KJ potrebne ke obedu: {}".format(kj_potrebne_obed))
 
-funkce.vytvor_obed(kj_potrebne_obed)
+obed = funkce.vytvor_obed(kj_potrebne_obed)
+print(obed)
 
 
 
