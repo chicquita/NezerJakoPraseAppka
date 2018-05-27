@@ -1,6 +1,8 @@
 import kategorie
 import psycopg2
 import random
+import math
+
 
 
 def initialize_cursor():
@@ -68,8 +70,10 @@ def vyber_zakladni_kosik (zakladni_kosiky, kategorie):
 def velky_select():
 	'''
 	tento select tam davam, protoze na zacatku sestavovani celeho jidelnicku 
-	musime mit vsechny hodnoty v Pythonu, abychom pozdeji, az sestavime jidelnicek, 
-	mohli upravit databazi (tzn. odebrat a nebo zmenit mnozstvi potraviny)
+	musime mit vsechny hodnoty v Pythonu, abychom pozdeji, az sestavime 
+	jidelnicek, mohli upravit databazi (tzn. odebrat a nebo zmenit mnozstvi 
+	potraviny). Kdybych to upravovala primo s vyberem jidel, tak i kdyz nektere
+	jidlo v jidelnicku nakonec nepouziju, tak by se mi to hned smazalo z datebaze.
 	!!!! U velkeho selectu si musime detailne hlidat, na ktere pozici co je!!!
 	'''
 	return select_all("""SELECT 
@@ -124,13 +128,17 @@ def logika_vypoctu(kategorie_ID, KJ, max_pocet_potravin=None):
 
 		if jidlo["vysledne_KJ"] >= KJ - float(spotrebovane_KJ):
 			# tady řešíme možnost, že vybrané jídlo má hned na první pokus více KJ než potřebných
-			pouzita_gramaz = int(int(jidlo["baleni"]*KJ)/float(jidlo["vysledne_KJ"]))
+			pouzita_gramaz = math.ceil(float(jidlo["baleni"]*KJ)/float(jidlo["vysledne_KJ"]))
 			#print(pouzita_gramaz)
 			zbyla_gramaz = jidlo["baleni"]-pouzita_gramaz
 			#print(zbyla_gramaz)
 			kategorie.TABULKA_ZASOB.remove(vybrane_jidlo)
-			kategorie.TABULKA_ZASOB.append((jidlo["nazev"], zbyla_gramaz, jidlo["KJ_na_gram_kus"], jidlo["jednotka"], zbyla_gramaz*float(vybrane_jidlo[2]), vybrane_jidlo[5]))
-			jidelnicek.append((jidlo["nazev"], pouzita_gramaz, jidlo["jednotka"], pouzita_gramaz * int(jidlo["KJ_na_gram_kus"])))
+			kategorie.TABULKA_ZASOB.append((jidlo["nazev"], zbyla_gramaz, 
+				jidlo["KJ_na_gram_kus"], jidlo["jednotka"], 
+				zbyla_gramaz*float(vybrane_jidlo[2]), vybrane_jidlo[5]))
+			jidelnicek.append((jidlo["nazev"], pouzita_gramaz, 
+				jidlo["jednotka"], pouzita_gramaz * float(jidlo["KJ_na_gram_kus"])))
+			KJ_k_prevedeni = int(float(KJ_k_prevedeni) + KJ - float(pouzita_gramaz*jidlo["KJ_na_gram_kus"]))
 			break	
 		
 		# Tady jsem z tabulky musela smazat vybrane jidlo, ktere jsem pouzila, 
@@ -143,17 +151,12 @@ def logika_vypoctu(kategorie_ID, KJ, max_pocet_potravin=None):
 			#ted mame nedostatek KJ, tak chceme vybrat jidlo s nejvice KJ a pouzit ho do naseho vyberu
 			spotrebovane_KJ = jidlo["vysledne_KJ"] + spotrebovane_KJ
 			#print(vybrane_jidlo)
-			TABULKA_ZASOB.remove(vybrane_jidlo)
+			kategorie.TABULKA_ZASOB.remove(vybrane_jidlo)
 			jidla_z_kategorii.remove(vybrane_jidlo)
-			jidelnicek.append((jidlo["nazev"], jidlo["baleni"], jidlo["jednotka"], jidlo["vysledne_KJ"]))
-			KJ_k_prevedeni = KJ_k_prevedeni + (KJ - float(spotrebovane_KJ))
-					
+			jidelnicek.append((jidlo["nazev"], jidlo["baleni"], jidlo["jednotka"], 
+				jidlo["vysledne_KJ"]))
+			KJ_k_prevedeni = int(KJ_k_prevedeni + (KJ - float(spotrebovane_KJ)))
 
-	#print(vybrane_jidlo)
-	#print(vybrane_jidlo_2)
-	#print(zbyla_gramaz_2)
-	#print(pouzita_gramaz_2)
-	#print(KJ_k_prevedeni)
 	return (KJ_k_prevedeni, jidelnicek)
 
 def vytvor_snidani(kj_potrebne_snidane):
@@ -174,14 +177,15 @@ def vytvor_snidani(kj_potrebne_snidane):
 		kj_potrebne_snidane*0.5, 2)
 	print(snidane_K1)
 	snidane_K2 = logika_vypoctu(kategorie.snidane[kosik_2], 
-		kj_potrebne_snidane*0.2)
+		kj_potrebne_snidane*0.2 + snidane_K1[0])
 	print(snidane_K2)
 	snidane_K3 = logika_vypoctu(kategorie.snidane[kosik_3], 
-		kj_potrebne_snidane*0.25)
+		kj_potrebne_snidane*0.25 + snidane_K2[0])
 	print(snidane_K3)
 	snidane_K4 = logika_vypoctu(kategorie.snidane["napoje"], 
-		kj_potrebne_snidane*0.05)
+		kj_potrebne_snidane*0.05 + snidane_K3[0])
 	print(snidane_K4)
+	print(snidane_K4[0])
 
 def vytvor_obed (kj_potrebne_obed):
 	seznam_hlavnich_jidel = ["maso_rostlinne_alternativy_syra","ryby", 
