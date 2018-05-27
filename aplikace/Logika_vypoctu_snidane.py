@@ -19,15 +19,26 @@ kj_potrebne_vecere = int(denni_prijem_kj/100*20)			# vecere 15-20%
 
 kategorie.TABULKA_ZASOB = funkce.velky_select()
 
-print("KJ potrebne ke snidani: {}".format(kj_potrebne_snidane))
+print("SNIDANE")
+print("KJ POTREBNE KE SNIDANI: {}".format(kj_potrebne_snidane))
 
 snidane = funkce.vytvor_snidani(kj_potrebne_snidane)
-print(snidane)
+for i in snidane[1]:
+	print("{}, {} {}, {:.0f} Kj".format(i[0], i[1], i[2], i[3])) #:.0f . rika, kolik desetinnych mist tam chci a f rika, ze pracuju s typem float
 
-print("KJ potrebne ke obedu: {}".format(kj_potrebne_obed))
+print("Zbyle KJ ze snidane: {}".format(snidane[0]))
+print()
+
+print("OBED")
+print("KJ POTREBNE K OBEDU: {}".format(kj_potrebne_obed))
 
 obed = funkce.vytvor_obed(kj_potrebne_obed)
-print(obed)
+for i in obed[1]:
+	print("{}, {} {}, {:.0f} Kj".format(i[0], i[1], i[2], i[3]))
+print("Zbyle KJ z obedu: {}".format(obed[0]))
+
+print()
+
 
 
 
