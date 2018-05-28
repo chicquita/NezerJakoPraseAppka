@@ -107,14 +107,23 @@ def logika_vypoctu(kategorie_ID, KJ, max_pocet_potravin=None):
 
 	jidla_z_kategorii = vyber_jidla_z_kategorii(kategorie_ID)
 	
-	if max_pocet_potravin is None:
-		max_pocet_potravin = len(jidla_z_kategorii)
 	# tento if tady mam, protoze u nekterych kosicku (napr. ovoce nebo zelenina)
 	# je mi jedno, jestli mi to vybere 20 druhu ovoce nebo zeleniny
 	# kdyby to nebylo definovane, muze to hazet chybu, protoze ta tabulka je
 	# strasne kratka a pritom jsme nezaplnili potrebne KJ, takze ono by se to 
 	# snazilo porad pokracovat dal a nezastavilo by se to. 
+	if max_pocet_potravin is None:
+		max_pocet_potravin = len(jidla_z_kategorii)
 	
+	
+	# tento if je tady, pro případ, že fce vybere zakladni kategorii jidla
+	# a ta ma hoooodne kj, takze se do dalsich kategorii prevadi velke zaporne
+	# kj. Bez tohoto ifu to nakonec hazelo vysledne kj k prevedeni nula. 
+	# proste se ztratily! :-D toto rovnou ukaze ty zaporne kj.
+	if KJ < 0:
+		return (KJ,[])
+	
+
 	while KJ >= spotrebovane_KJ and pocet_potravin < max_pocet_potravin:
 		vybrane_jidlo = vyber_jidla_s_nejvice_KJ(jidla_z_kategorii)
 		pocet_potravin += 1
