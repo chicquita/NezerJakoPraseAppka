@@ -2,13 +2,14 @@
 # databaze, ale z casovych duvodu je to prozatim tady.
 TABULKA_ZASOB = []
 
+
 snidane = {
 	"slane_pecivo":[56, 57],
 	"sladke_pecivo":[58],
 	"jogurty":[26, 27],
 	"cerealie_vlocky": [70],
 	"ovoce":[53],
-	"zelenina":[55],
+	"zelenina":[55, 86],
 	"prilohy_pro_slane_pecivo":[63, 62, 52, 37, 35, 34, 33, 32, 31, 
 		28, 27, 26, 22, 21, 20, 18, 17, 16, 14, 12],
 	"prilohy_pro_sladke_pecivo":[67, 66, 64, 54, 52, 48, 27, 26],
@@ -41,7 +42,7 @@ obed = {
 	"mc_donald":[5],
 	"pizza":[6],
 	"piti" : [41, 42, 43, 44, 45, 46],
-	"salaty" : [51, 55, 69],
+	"salaty" : [86],
 	"prilohy_k_salatum" : [13, 15, 62, 19, 24, 25, 18, 22, 31, 32, 34],
 	"testoviny" : [78, 85],
 	"prilohy_k_testovinam" : [13, 15, 62, 19, 23, 24, 25, 47, 18, 19, 22, 31, 32, 34],

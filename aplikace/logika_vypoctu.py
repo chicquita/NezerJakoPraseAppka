@@ -44,5 +44,4 @@ print()
 
 #kdyz to vybere kategorii, kde nic nemam v zasobach, musi to vybrat jinou kategorii!!!!
 # opravit salaty!!!!
-# krati to porce u veci, co jsou na kus (chce to vzit napr 0,8 ks, coz se zaokrouhlenim 
-#vypise jako nula a pak se i kalorie nasobi nulou,takze vychazi nula )
+# u jídel s knedlíkama oddělat zeleninu 
