@@ -234,22 +234,32 @@ def vytvor_obed (kj_potrebne_obed):
 
 	if priloha is not None:
 		KJ = 0.5
+		if zakladni_kosik is "salaty": # aby mi to nehazelo 1,5 kg salatu na obed
+			KJ = 0.1
 	else:
 		KJ = 0.8
+
 	obed_K1 = logika_vypoctu(kategorie.obed[zakladni_kosik], 
 		kj_potrebne_obed*KJ)
 
+	
 	if priloha is not None:
+		KJ = 0.3
+
+		if zakladni_kosik is "salaty":
+			KJ = 0.9
 		obed_K2 = logika_vypoctu(kategorie.obed[priloha], 
-			kj_potrebne_obed*0.3 + obed_K1[0])
+			kj_potrebne_obed*KJ + obed_K1[0])
 	else:
 		obed_K2 = (obed_K1[0],[])
 	
+	
 	if zakladni_kosik is not "hotove_jidlo_sladke":
-		zelenina_ovoce = "salaty"
+		zelenina_ovoce = "zelenina"
 	else:
 		zelenina_ovoce = "ovoce"
-
+		
+		
 	
 	if zakladni_kosik not in["salaty", "mc_donald", "pizza"]:
 		obed_K3 = logika_vypoctu(kategorie.obed[zelenina_ovoce], 
@@ -263,6 +273,3 @@ def vytvor_obed (kj_potrebne_obed):
 # u kategorii 80,82 kam se hodi knedliky a testoviny jako prolohy se
 # stalo, ze v databazi nebyla potravina pro prilohu. Ukol, v techto 
 # pripadech napsat "Nemas dostatecne mnozstvi potravin pro prilohu"
-
-# v případě, že je vybraný oběd pouze z kategorie 1, tak se nevypisují 
-#převedené záporné kj

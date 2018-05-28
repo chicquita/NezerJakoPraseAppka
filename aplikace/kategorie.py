@@ -46,5 +46,6 @@ obed = {
 	"prilohy_k_salatum" : [13, 15, 62, 19, 24, 25, 18, 22, 31, 32, 34],
 	"testoviny" : [78, 85],
 	"prilohy_k_testovinam" : [13, 15, 62, 19, 23, 24, 25, 47, 18, 19, 22, 31, 32, 34],
-	"ovoce" : [53]
+	"ovoce" : [53],
+	"zelenina" : [55, 69]
 }
