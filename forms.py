@@ -1,3 +1,5 @@
+#BUDE SLLOUZIT CASEM PRO PRIHLASENI, KOD NIZE JE POUZE HRUBY NASTREL, KTERY ZATIM NEOBSAHUJE VSECHNY POTREBNE STRINGFIELDS
+
 from flask_wtf import Form 
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email, Length
