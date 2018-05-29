@@ -1,0 +1,750 @@
+nazev;kj;bilkoviny;tuky;sacharidy
+ Agar;14.28;0;0;0.006
+ Aloe vera, listy;1.05;0.007;0;0
+ Amarant semena;14.76;0.072;0.002;0.145
+ Amur bílý, maso z celé ryby;4.24;0.037;0.005;0.169
+ Ananas;2.12;0.002;0;0.005
+ Ananas sušený;15.01;0.002;0.001;0.005
+ Angrešt;1.86;0.002;0;0.008
+ Arašídy;24.6;0.489;0.092;0.258
+ Arašídy loupané;25.26;0.493;0.092;0.253
+ Artyčok;2.61;0.006;0;0.032
+ Avokádo;6.97;0.165;0.031;0.015
+ Bábovka třená;15.21;0.146;0.092;0.056
+ Banány;4.15;0.003;0.001;0.011
+ Bér;14.9;0.053;0.004;0.124
+ Bílkovina mléčná;2.61;0.001;0;0.094
+ Bílkovina sójová izolovaná;15.53;0.027;0.008;0.82
+ Bio-Margarín se sníženým obsahem tuku (60 %), Rama Bio, UNILEVER;22.2;0.6;0.163;0
+ Borůvky;2.13;0.006;0;0.007
+ Bramborák, domácí;10.2;0.1;0.046;0.056
+ Bramborák, trh;10.9;0.132;0.012;0.048
+ Brambory rané;3.03;0.002;0;0.02
+ Brambory sladké (batáty, jamy);2.77;0.002;0;0.011
+ Brambory zimní;3.3;0.003;0;0.024
+ Brambory zimní, loupané, vařené v nesolené vodě;3.04;0.003;0;0.02
+ Brokolice;1.53;0.003;0;0.044
+ Broskve;2.05;0.002;0;0.009
+ Brusinky;2.04;0.007;0.005;0.006
+ Brusinky sušené;15.03;0.012;0.002;0.002
+ Buchty kynuté, plněné tvarohovou náplní;12.35;0.081;0.036;0.09
+ Bulgur špaldový;15.6;0.034;0.004;0.137
+ Celer bulvový;1.17;0.003;0;0.015
+ Celer řapíkatý;0.69;0.002;0;0.007
+ Cibule;1.64;0.003;0;0.014
+ Cibule červená;1.91;0.002;0;0.014
+ Cibule šalotka;1.87;0.001;0;0.015
+ Citróny;1.49;0.004;0;0.007
+ Cizrna;12.85;0.058;0.006;0.2
+ Cuketa;0.57;0.001;0.001;0.008
+ Cukr hroznový (glukóza);15.57;0;0;0.002
+ Cukr řepný, bílý;17;0;0;0
+ Cukr třtinový;16.8;0;0;0
+ Cukr vanilkový;17.01;0.002;0;0
+ Česnek;6.36;0.004;0;0.063
+ Česnek medvědí;1.55;0.01;0;0.033
+ Čočka;13.72;0.007;0;0.236
+ Čočka červená;13.17;0.013;0.002;0.247
+ Čočka, vařená v nesolené vodě;4.66;0.004;0;0.079
+ Čokoláda bílá;22.9;0.321;0.193;0.059
+ Čokoláda hořká, obsah kakaa 45-59 %;22.2;0.313;0.184;0.049
+ Čokoláda hořká, obsah kakaa 60-69 %;23.4;0.383;0.219;0.061
+ Čokoláda hořká, obsah kakaa 70-85 %;23.9;0.426;0.244;0.078
+ Čokoláda mléčná;22.1;0.297;0.185;0.077
+ Dalamánek;12.2;0.035;0.003;0.069
+ Datle, sušené;14.34;0.008;0.001;0.025
+ Destilát, whisky;10.5;0;0;0
+ Droby kachní;5.35;0.051;0.015;0.198
+ Droby kuřecí;4.93;0.044;0.013;0.18
+ Droždí lisované;4.37;0.027;0.004;0.144
+ Droždí sušené;14.19;0.064;0.024;0.438
+ Dršťky hovězí;3.55;0.01;0.004;0.187
+ Fazole bílé, sušené;14.11;0.008;0;0.217
+ Fazole bílé, vařené v nesolené vodě;5.39;0.004;0;0.089
+ Fazole černé;11.29;0.014;0.002;0.204
+ Fazole červené;11.51;0.017;0.003;0.186
+ Fazolky;1.34;0.002;0;0.023
+ Fíky;3.23;0.003;0.001;0.008
+ Fíky, sušené;10.9;0.009;0.002;0.033
+ Goji, plody kustovnice čínské, sušené;14.54;0.033;0.003;0.121
+ Grapefruit;1.7;0.002;0.001;0.006
+ Guma arabská;14.5;0;0;0.014
+ Guma guar;7.83;0;0;0.05
+ Guma tara;7.72;0.008;0;0.023
+ Guma xanthanová;7.37;0.006;0;0.036
+ Hamburger (firma McDONALD´S);10.5;0.074;0.024;0.13
+ Hlíva ústřičná;0.85;0.001;0.001;0.016
+ Hmota kakaová;25.4;0.544;0.332;0.138
+ Hořčice kremžská;5.45;0.066;0;0.045
+ Hořčice plnotučná;5.45;0.066;0;0.045
+ Hrách;14.29;0.018;0;0.195
+ Hrách, vařený v nesolené vodě;4.84;0.004;0;0.065
+ Hranolky bramborové, smažené, trh;13.1;0.155;0.04;0.043
+ Hrášek;3.25;0.004;0;0.065
+ Hrušky;2.38;0.003;0.001;0.005
+ Hřib smrkový;1.7;0.006;0;0.051
+ Hřib smrkový, sušený;13.6;0.031;0;0.377
+ Cheeseburger (firma McDONALD´S);10.9;0.09;0.033;0.184
+ Chicken Mc Nuggets (firma McDONALD´S);11.2;0.146;0.036;0.202
+ Chléb pšenično-žitný, Šumava;10.5;0.017;0;0.06
+ Chléb pšeničný bílý;10.3;0.016;0;0.083
+ Chléb pšeničný celozrnný;9.68;0.02;0;0.089
+ Chléb pšeničný celozrnný, Graham;10.4;0.027;0;0.091
+ Chřest bílý;0.8;0.001;0.001;0.015
+ Inulin;10.91;0.006;0;0.002
+ Jablka;2.19;0.004;0.001;0.004
+ Jablka sušená;13.31;0.005;0.001;0.013
+ Jáhly;15.22;0.025;0.002;0.119
+ Jahody zahradní;1.58;0.004;0;0.008
+ Játra hovězí;5.48;0.04;0;0.192
+ Játra husí;4.93;0.027;0.01;0.219
+ Játra kachní;5.1;0.033;0.011;0.206
+ Játra králičí;4.66;0.034;0.01;0.2
+ Játra krůtí;4.78;0.031;0.011;0.207
+ Játra kuřecí;5.09;0.05;0.015;0.168
+ Játra kuřecí, Zlaté kuře;4.37;0.029;0.01;0.194
+ Játra telecí;6.34;0.061;0.026;0.213
+ Játra vepřová;4.96;0.027;0.004;0.194
+ Játra, tresčí v oleji a vlastní šťávě;24.7;0.644;0;0.042
+ Jazyk hovězí;7.79;0.137;0;0.16
+ Jazyk vepřový;7.77;0.135;0.046;0.163
+ Ječmen nahý;14.2;0.03;0.005;0.119
+ Jeřabiny;2.71;0.01;0.001;0.007
+ Ježatka;14.98;0.075;0.005;0.144
+ Jidášovo ucho, sušené;7.62;0.007;0;0.059
+ Jitrnice;11.4;0.191;0;0.151
+ Jogurt bílý, 3,5 % tuku;3.11;0.035;0.023;0.045
+ Jogurt bílý, se sníženým obsahem tuku, 1,5 % tuku;2.16;0.015;0.01;0.039
+ Jogurt smetanový, min. 10 % tuku;4.91;0.1;0.065;0.03
+ Josta;1.99;0.005;0;0.008
+ Kachna divoká, maso z celého kusu bez kůže;5.78;0.054;0.019;0.224
+ Kachna divoká, maso z celého kusu s kůží;6.42;0.078;0.027;0.208
+ Kachna divoká, prsa, bez kůže;4.83;0.024;0.007;0.232
+ Kachna divoká, stehno, bez kůže;5.96;0.061;0.017;0.218
+ Kachna domácí, maso, s kůží;16.5;0.393;0;0.115
+ Kapr obecný, maso bez kostí a kůže, dušené;7.57;0.121;0.02;0.182
+ Kapr obecný, maso bez kostí a kůže, pečené;7.92;0.128;0.021;0.187
+ Kapr obecný, maso bez kostí a kůže, smažené;8.97;0.158;0.029;0.184
+ Kapr obecný, maso bez kostí a kůže, syrové;6.3;0.089;0.015;0.177
+ Kapr obecný, maso s kůží;5.22;0.063;0.017;0.162
+ Kapr, jikry a mlíčí;11.5;0.251;0.056;0.131
+ Kapr, vnitřnosti;13.04;0.312;0.089;0.088
+ Kapusta hlávková;1.61;0.007;0;0.034
+ Kapusta růžičková;2.04;0.005;0;0.045
+ Karagenan;5.08;0.006;0;0.006
+ Karambola, plod;1.33;0.004;0;0.006
+ Karubin;8.09;0.013;0;0.063
+ Kaseinát potravinářský;15;0.019;0.013;0.843
+ Kaštany jedlé;7.05;0.011;0.002;0.029
+ Káva pražená;13.57;0.138;0.057;0.15
+ Kečup;4.58;0.005;0;0.018
+ Kedlubna;1.14;0.001;0;0.021
+ Kiwáno;1.49;0.014;0.002;0.015
+ Kiwi;2.44;0.008;0;0.01
+ Klíčky kukuřice;15.05;0.036;0.005;0.07
+ Klíčky ovesné;15.65;0.076;0.012;0.113
+ Klíčky pohankové;14;0.1;0.019;0.357
+ Klíčky pšeničné;12.6;0.078;0.01;0.244
+ Knedlík bramborový, domácí;5.83;0.006;0.002;0.045
+ Knedlík bramborový, trh;7.36;0.007;0.001;0.055
+ Knedlík houskový, domácí;8.4;0.014;0.005;0.075
+ Knedlík chlupatý, domácí;4.76;0.016;0.007;0.036
+ Kokos mletý;28.3;0.657;0;0.064
+ Kopr;1.43;0.003;0;0.026
+ Koření nové;14.3;0.07;0;0.056
+ Koření, bazalka, sušená;9.88;0.029;0.011;0.188
+ Koření, fenykl;12.89;0.161;0.008;0.167
+ Koření, hřebíček;15.1;0.172;0;0.058
+ Koření, kardamom;11.38;0.02;0.003;0.086
+ Koření, kmín;13.6;0.137;0;0.126
+ Koření, kmín římský;15.64;0.229;0.011;0.196
+ Koření, kurkuma;12.96;0.017;0;0.095
+ Koření, majoránka, sušená;10.9;0.056;0;0.143
+ Koření, muškátový květ;17;0.264;0;0.059
+ Koření, muškátový oříšek;20.2;0.363;0;0.071
+ Koření, paprika, sladká, mletá;13.44;0.138;0.02;0.15
+ Koření, pepř, černý;14;0.086;0;0.118
+ Koření, tymián, sušený;11.8;0.074;0;0.091
+ Koření, zázvor, mletý;14;0.047;0;0.071
+ Kroupy ječné;14.8;0.028;0.005;0.092
+ Krupice kukuřičná, T1200;14.7;0.029;0;0.092
+ Krupice kukuřičná, T600;14.9;0.011;0;0.084
+ Krupice pohanková;14.74;0.019;0.004;0.076
+ Krupice, pšeničná, hrubá, T 480, obsah popele max. 0,5 % v suš.;14.6;0.012;0.002;0.108
+ Křen;3.39;0.005;0;0.039
+ Křibice (žito trsnaté);14.1;0.024;0.003;0.16
+ Kukuřice cukrová, sterilovaná;4.28;0.011;0;0.031
+ Kukuřice cukrová, zmrazená;4.74;0.014;0;0.033
+ Kukuřice mladá celá;1.16;0.002;0;0.021
+ Kuskus;14.9;0.012;0.002;0.142
+ Kůže kuřecí, průměr z celého trupu;18.55;0.467;0.136;0.075
+ Kůže vepřové, zbavené tuku;16.36;0.336;0.14;0.231
+ Květák;1.1;0.002;0;0.024
+ Langoš, trh;13.9;0.145;0.012;0.074
+ Lecitin slunečnicový;25.62;0.527;0.202;0.075
+ Lečo zeleninové, sterilované;1.38;0.006;0;0.011
+ Ledviny hovězí;3.98;0.036;0.017;0.156
+ Ledviny vepřové;4.39;0.042;0;0.163
+ Lihovina, gin;11;0;0;0
+ Lihovina, Tuzemák, 40 %;9.19;0;0;0
+ Lihovina, vodka;9.69;0;0;0
+ Lilek;0.77;0;0;0.008
+ Limetka;1.48;0;0;0.006
+ Losos atlantický, filet, bez kůže;6.64;0.078;0.008;0.221
+ Losos atlantický, filet, s kůží;9.33;0.169;0.009;0.181
+ Luncheon meat;12.8;0.266;0.087;0.13
+ Luncheon meat, drůbeží;6.74;0.098;0;0.143
+ Majonéza;30;0.8;0;0.011
+ Mák  ;20.43;0.389;0.046;0.218
+ Maliny;2.09;0.006;0;0.012
+ Maltodextrin;16.03;0;0;0
+ Mandarinky;1.76;0.002;0;0.006
+ Mandle;24.5;0.479;0.045;0.281
+ Mandle loupané;25.44;0.535;0.041;0.246
+ Mango;2.92;0.005;0.001;0.006
+ Mangold;1.04;0.003;0;0.023
+ Maniok jedlý, kasava;6.08;0.002;0;0.009
+ Marakuja (mučenka jedlá);3.89;0.034;0.004;0.025
+ Margarín s nízkým obsahem tuku (39 %) s přídavkem másla, Perla máslová příchuť, UNILEVER;14.73;0.392;0.102;0.001
+ Margarín s nízkým obsahem tuku (39 %), Perla plus Vitamíny, UNILEVER;14.5;0.392;0.103;0
+ Margarín s nízkým obsahem tuku (39 %), Rama jemně slaná, UNILEVER;14.8;0.392;0.103;0.002
+ Margarín s nízkým obsahem tuku (39 %), Rama Linie, UNILEVER;14.8;0.392;0.109;0.002
+ Margarín s nízkým obsahem tuku (39 %), Rama MultiVita, UNILEVER;14.8;0.392;0.106;0.002
+ Margarín s nízkým obsahem tuku (39 %), Rama Olivio, UNILEVER;14.8;0.392;0.106;0.002
+ Margarín se sníženým obsahem tuku (60 %), Rama Lahodná máslová příchuť, UNILEVER;22.3;0.6;0.173;0.002
+ Margarín se sníženým obsahem tuku (60%), Rama Classic, UNILEVER;22.3;0.6;0.176;0.002
+ Máslo;30.95;0.83;0.507;0.006
+ Máslo arašídové;25.7;0.507;0.105;0.277
+ Máslo kakaové;36.93;0.998;0.606;0
+ Máslo syrovátkové;29.3;0.789;0.516;0
+ Maso dančí, hřbet;4.78;0.035;0.017;0.205
+ Maso dančí, kýta;4.19;0.013;0.006;0.218
+ Maso dančí, na guláš;4.12;0.012;0.006;0.217
+ Maso dančí, panenka;4.31;0.015;0.008;0.221
+ Maso dančí, plec;4.32;0.023;0.012;0.204
+ Maso hovězí, kližka, libová, dušená;6.51;0.027;0.011;0.324
+ Maso hovězí, kližka, libová, syrová;3.92;0.013;0.006;0.202
+ Maso hovězí, kližka, syrová (separovatelný tuk 1 %);4.21;0.022;0.01;0.2
+ Maso hovězí, kližka, syrová (separovatelný tuk 3 %);4.81;0.04;0.02;0.196
+ Maso hovězí, kližka, syrová (separovatelný tuk 5 %);5.4;0.057;0.029;0.193
+ Maso hovězí, kýta;4.27;0.013;0.006;0.223
+ Maso hovězí, kýta, libová, pečená;7.33;0.03;0.013;0.366
+ Maso hovězí, kýta, syrová (separovatelný tuk 1 %);4.57;0.022;0.011;0.221
+ Maso hovězí, kýta, syrová (separovatelný tuk 2 %);4.86;0.031;0.015;0.219
+ Maso hovězí, kýta, syrová (separovatelný tuk 3 %);5.15;0.04;0.02;0.217
+ Maso hovězí, kýta, vařená;8.18;0.081;0.033;0.296
+ Maso hovězí, plec bez kosti, libová, pečená;7.32;0.037;0.016;0.35
+ Maso hovězí, plec bez kosti, libová, syrová;4.44;0.022;0.01;0.213
+ Maso hovězí, plec bez kosti, syrová (separovatelný tuk 10 %);7.35;0.11;0.057;0.193
+ Maso hovězí, plec bez kosti, syrová (separovatelný tuk 3 %);5.31;0.048;0.024;0.207
+ Maso hovězí, plec bez kosti, syrová (separovatelný tuk 5 %);5.89;0.066;0.033;0.203
+ Maso hovězí, roštěnec bez kosti, libový, dušený;8.23;0.053;0.023;0.369
+ Maso hovězí, roštěnec bez kosti, libový, syrový;5.18;0.042;0.019;0.213
+ Maso hovězí, roštěnec bez kosti, syrový (separovatelný tuk 1 %);5.46;0.051;0.023;0.211
+ Maso hovězí, roštěnec bez kosti, syrový (separovatelný tuk 3 %);6.03;0.068;0.033;0.207
+ Maso hovězí, roštěnec bez kosti, syrový (separovatelný tuk 5 %);6.6;0.085;0.042;0.203
+ Maso hovězí, svíčková;5.26;0.049;0.022;0.203
+ Maso hovězí, svíčková,  syrová (separovatelný tuk 1 %);5.55;0.058;0.027;0.201
+ Maso hovězí, svíčková,  syrová (separovatelný tuk 2 %);5.83;0.066;0.031;0.199
+ Maso hovězí, svíčková, libová, smažená;6.99;0.069;0.032;0.261
+ Maso hovězí, výrobní, H1;4.39;0.018;0.008;0.219
+ Maso hovězí, výrobní, H2;5.95;0.068;0.032;0.2
+ Maso hovězí, výrobní, H3;7.1;0.097;0.04;0.206
+ Maso hovězí, výrobní, H4;8.4;0.141;0.056;0.188
+ Maso hovězí, výrobní, H5;12.31;0.258;0.105;0.163
+ Maso husí, bez kůže;5.4;0.062;0.017;0.184
+ Maso husí, s kůží;11.69;0.252;0.072;0.139
+ Maso husí, stehno s kůží;14.64;0.335;0.099;0.132
+ Maso husí, stehno, bez kůže;11.31;0.233;0.068;0.158
+ Maso jehněčí, hrudí;7.06;0.098;0.046;0.202
+ Maso jehněčí, hřbet;4.56;0.031;0.015;0.201
+ Maso jehněčí, krk;4.77;0.042;0.021;0.189
+ Maso jehněčí, kýta;5.45;0.054;0.024;0.203
+ Maso jehněčí, plec;4.74;0.037;0.014;0.198
+ Maso jelení (jelen lesní),  hřbet;4.93;0.035;0.02;0.214
+ Maso jelení (jelen lesní), kýta;4.64;0.029;0.016;0.21
+ Maso jelení (jelen lesní), na guláš;4.8;0.031;0.016;0.215
+ Maso jelení (jelen lesní), plec;4.22;0.023;0.013;0.198
+ Maso jelení (jelen lesní), svíčková;4.79;0.02;0.012;0.238
+ Maso kachní, čtvrtky zadní, s kostí, s kůží;12.26;0.268;0.075;0.138
+ Maso kachní, hřbety, s kostí, s kůží;11.96;0.263;0.069;0.131
+ Maso kachní, kachna mladá, celá, s kůží, bez drobů;12.2;0.26;0.077;0.151
+ Maso kachní, krky;5.38;0.059;0.018;0.188
+ Maso kachní, křídla, s kůží;6.56;0.094;0.025;0.181
+ Maso kachní, prsa bez kůže a bez kosti;4.15;0.02;0.006;0.201
+ Maso kachní, prsa s kostí, s kůží;10.02;0.196;0.057;0.163
+ Maso kachní, stehno, bez kosti, bez kůže – stehenní řízek  ;5.9;0.073;0.021;0.188
+ Maso kachní, stehno, s kostí, s kůží;9.68;0.19;0.057;0.156
+ Maso kachní, strojně oddělené;9.45;0.198;0.055;0.125
+ Maso kančí, hřbet;7.51;0.116;0.028;0.189
+ Maso kančí, kýta;4.4;0.017;0.004;0.221
+ Maso kančí, na guláš;6.35;0.075;0.018;0.205
+ Maso kančí, panenka;5.05;0.03;0.007;0.228
+ Maso kančí, plec;6.61;0.089;0.022;0.195
+ Maso králičí, filety (vykostěný hřbet bez kosti, bez kůže);4.3;0.01;0.004;0.231
+ Maso králičí, králík celý, bez kůže;5.29;0.051;0.006;0.2
+ Maso králičí, plec s hrudí (přední noha s hrudníkem), bez kůže;7.7;0.125;0.046;0.181
+ Maso králičí, stehna, bez kůže;4.21;0.016;0.006;0.213
+ Maso krůtí, horní stehno s kostí a kůží;9.24;0.162;0.067;0.191
+ Maso krůtí, horní stehno, bez kosti, bez kůže;5.73;0.063;0.014;0.2
+ Maso krůtí, krky;5.96;0.078;0.024;0.181
+ Maso krůtí, křídla s kůží;8.02;0.122;0.033;0.206
+ Maso krůtí, prsa bez kosti a kůže;4.33;0.01;0.003;0.233
+ Maso krůtí, prsa s kostí a kůží;5.22;0.036;0.009;0.23
+ Maso krůtí, spodní stehna, s kostí, s kůží;5.15;0.05;0.014;0.194
+ Maso krůtí, stehno bez kůže a bez kosti;5.27;0.05;0.016;0.202
+ Maso krůtí, strojně oddělené (separát)  ;7.98;0.144;0.046;0.156
+ Maso kuřecí, horní stehno bez kosti a kůže;5.89;0.075;0.023;0.183
+ Maso kuřecí, horní stehno s kostí a kůží;10.3;0.205;0.06;0.161
+ Maso kuřecí, krky;6.87;0.12;0.03;0.143
+ Maso kuřecí, křídla dělená /bez špičky/, s kostí, s kůží;8.12;0.139;0.04;0.175
+ Maso kuřecí, křídla s kostí a kůží;7.87;0.138;0.04;0.163
+ Maso kuřecí, kuře celé, s kůží, bez drobů;9.35;0.176;0.052;0.167
+ Maso kuřecí, prsa s kůží a kostí;5.28;0.051;0.015;0.199
+ Maso kuřecí, prsa, bez kůže;4.29;0.012;0.004;0.228
+ Maso kuřecí, prsní ořez;5.5;0.054;0.017;0.206
+ Maso kuřecí, spodní stehno bez kosti a kůže;4.94;0.05;0.014;0.182
+ Maso kuřecí, spodní stehno s kostí a kůží;5.29;0.061;0.017;0.178
+ Maso kuřecí, stehenní řízek s kůží, bez kosti;7.23;0.116;0.031;0.173
+ Maso kuřecí, stehno bez kůže a bez kosti – kuřecí stehenní řízek;6.03;0.08;0.025;0.182
+ Maso kuřecí, stehno, s kůží;7.91;0.135;0.039;0.172
+ Maso kuřecí, strojně oddělené I (tvrdé oddělování);7.29;0.122;0.031;0.163
+ Maso kuřecí, strojně oddělené II – baader (měkké oddělování);5.51;0.051;0.015;0.213
+ Maso kuřecí, vnitřní prsní filet, bez kosti, bez kůže;4.21;0.008;0.001;0.23
+ Maso kuřecí, zadní čtvrtky s kostí a kůží;8.85;0.166;0.05;0.16
+ Maso kuřecí, zadní hřbety, s kostí, s kůží;13.74;0.314;0.08;0.125
+ Maso kuřecí, zlaté kuře s výkrmem min. 50 dní, celé, bez drobů;9.19;0.164;0.049;0.183
+ Maso kuřecí, Zlaté kuře, křídla, s kůží;7.41;0.117;0.035;0.181
+ Maso kuřecí, Zlaté kuře, prsa, s kůží, s kostí;6.13;0.071;0.022;0.206
+ Maso kuřecí, Zlaté kuře, prsní řízky, bez kostí, bez kůže;4.19;0.007;0.002;0.231
+ Maso kuřecí, Zlaté kuře, stehna, s kostí, s kůží;6.9;0.106;0.031;0.175
+ Maso kuřecí, Zlaté kuře, stehno, bez kosti, bez kůže – stehenní řízek;6.6;0.092;0.027;0.188
+ Maso kuřecí, Zlaté kuře, zadní čtvrtky, s kostí, s kůží;7.54;0.126;0.04;0.169
+ Maso mufloní, hřbet;4.5;0.028;0.013;0.204
+ Maso mufloní, kýta;4.36;0.019;0.008;0.215
+ Maso mufloní, na guláš;4.46;0.023;0.009;0.212
+ Maso mufloní, panenka;5.85;0.074;0.04;0.183
+ Maso mufloní, plec;4.49;0.035;0.016;0.188
+ Maso slepičí, prsa bez kosti a kůže;4.69;0.009;0.003;0.256
+ Maso slepičí, prsa s kostí a kůží;5.71;0.051;0.013;0.225
+ Maso slepičí, slepice celá, bez drobů;8.96;0.155;0.043;0.189
+ Maso slepičí, stehno bez kůže a kosti – slepičí stehenní řízek;6.2;0.073;0.019;0.206
+ Maso slepičí, stehno s kůží a kostí;5.59;0.062;0.016;0.194
+ Maso srnčí, hřbet;3.66;0.007;0.003;0.2
+ Maso srnčí, kýta;3.5;0.003;0.001;0.197
+ Maso srnčí, na guláš;3.4;0.007;0.003;0.185
+ Maso srnčí, plec;3.22;0.003;0.001;0.183
+ Maso srnčí, svíčková;3.38;0.003;0.001;0.192
+ Maso telecí, hrudí;6.4;0.092;0.045;0.176
+ Maso telecí, krk;4.68;0.035;0.015;0.199
+ Maso telecí, kýta;4.03;0.012;0.006;0.211
+ Maso telecí, pečeně;5.63;0.054;0.023;0.211
+ Maso telecí, plec;4.28;0.015;0.006;0.219
+ Maso vepřové výrobní, V10;27.84;0.729;0.283;0.05
+ Maso vepřové, bok bez kosti a kůže, pečený;16.6;0.339;0.096;0.238
+ Maso vepřové, bok bez kosti a kůže, syrový;13.5;0.297;0.077;0.145
+ Maso vepřové, krkovice bez kosti, libová, pečená;11.2;0.166;0.043;0.296
+ Maso vepřové, krkovice bez kosti, libová, syrová;7.23;0.104;0.027;0.199
+ Maso vepřové, krkovice bez kosti, syrová (separovatelný tuk 10 %);9.1;0.16;0.043;0.186
+ Maso vepřové, krkovice bez kosti, syrová (separovatelný tuk 3 %);7.79;0.121;0.032;0.195
+ Maso vepřové, krkovice bez kosti, syrová (separovatelný tuk 5 %);8.16;0.132;0.035;0.193
+ Maso vepřové, krkovice bez kosti, uzená, komerčně tepelně upravená;9.95;0.195;0.049;0.161
+ Maso vepřové, krkovice bez kosti, uzená, syrová;7.86;0.156;0.043;0.123
+ Maso vepřové, krkovice bez kosti, uzená, vařená;11.2;0.243;0.071;0.131
+ Maso vepřové, kýta bez kosti, libová, pečená;8.05;0.061;0.015;0.341
+ Maso vepřové, kýta bez kosti, libová, syrová;4.75;0.032;0.008;0.21
+ Maso vepřové, kýta bez kosti, syrová (separovatelný tuk 10 %);6.86;0.095;0.026;0.196
+ Maso vepřové, kýta bez kosti, syrová (separovatelný tuk 3 %);5.39;0.051;0.013;0.206
+ Maso vepřové, kýta bez kosti, syrová (separovatelný tuk 5 %);5.81;0.064;0.017;0.203
+ Maso vepřové, pečeně bez kosti, libová, pečená;7.85;0.054;0.013;0.344
+ Maso vepřové, pečeně bez kosti, libová, syrová;5.28;0.038;0.009;0.228
+ Maso vepřové, pečeně bez kosti, syrová (separovatelný tuk 1 %);5.49;0.044;0.011;0.226
+ Maso vepřové, pečeně bez kosti, syrová (separovatelný tuk 3 %);5.9;0.057;0.015;0.223
+ Maso vepřové, pečeně bez kosti, syrová (separovatelný tuk 5 %);6.31;0.069;0.018;0.22
+ Maso vepřové, plec bez kosti, kolena a kůže, libová, pečená;7.41;0.043;0.01;0.342
+ Maso vepřové, plec bez kosti, kolena a kůže, libová, syrová;4.94;0.042;0.01;0.199
+ Maso vepřové, plec bez kosti, kolena a kůže, syrová (separovatelný tuk 10 %);7.02;0.104;0.028;0.186
+ Maso vepřové, plec bez kosti, kolena a kůže, syrová (separovatelný tuk 3 %);5.56;0.061;0.016;0.195
+ Maso vepřové, plec bez kosti, kolena a kůže, syrová (separovatelný tuk 5 %);5.98;0.073;0.019;0.193
+ Maso vepřové, strojně oddělené, nízkotlaké;10.88;0.225;0.04;0.15
+ Maso vepřové, výrobní, V1;4.82;0.026;0.01;0.227
+ Maso vepřové, výrobní, V11;16.83;0.396;0.14;0.125
+ Maso vepřové, výrobní, V2;5.41;0.051;0.019;0.207
+ Maso vepřové, výrobní, V3;7.27;0.099;0.039;0.212
+ Maso vepřové, výrobní, V4;9.08;0.165;0.059;0.175
+ Maso vepřové, výrobní, V5;14.95;0.338;0.135;0.144
+ Maso vepřové, výrobní, V6;20.2;0.494;0.195;0.113
+ Maso vepřové, výrobní, V7;27.82;0.728;0.294;0.05
+ Maso vepřové, výrobní, V8;29.45;0.779;0.306;0.038
+ Maso vepřové, výrobní, V9;19.02;0.462;0.176;0.113
+ McChicken (firma McDONALD´S);11;0.106;0.017;0.116
+ Med včelí;13.9;0;0;0.003
+ Melanž vaječná;6.12;0.101;0.028;0.125
+ Melasa;12.7;0.001;0;0
+ Meruňky;2.23;0.001;0;0.005
+ Meruňky sušené;11.7;0.005;0.002;0.023
+ Mléko acidofilní, min. 3 % tuku;2.66;0.035;0.023;0.033
+ Mléko kefírové;1.68;0.011;0.01;0.027
+ Mléko kefírové, sníženým obsahem tuku, 0,7 % tuku;1.62;0.007;0.005;0.033
+ Mléko kozí;2.2;0.024;0.021;0.03
+ Mléko nízkotučné (odtučněné);1.6;0.005;0.003;0.034
+ Mléko odstředěné;1.45;0.001;0.001;0.034
+ Mléko ovčí;5.26;0.091;0.062;0.081
+ Mléko plnotučné;2.64;0.034;0.022;0.033
+ Mléko polotučné;1.93;0.015;0.01;0.033
+ Mléko sušené, nízkotučné;16.4;0.06;0.039;0.34
+ Mléko sušené, odstředěné;15.2;0.01;0.007;0.355
+ Mléko sušené, plnotučné;20.81;0.26;0.168;0.268
+ Mléko sušené, polotučné;18;0.14;0.091;0.307
+ Mléko syrové;2.89;0.041;0.027;0.033
+ Mléko zahuštěné, plnotučné, neslazené;6.68;0.09;0.058;0.08
+ Mléko zahuštěné, plnotučné, slazené;13.9;0.09;0.058;0.075
+ Morčák evropský (vlk mořský, okoun mořský);5.75;0.07;0.012;0.186
+ Mořan zlatý (pražma královská);6.71;0.093;0.023;0.192
+ Mouka amarantová;15.37;0.067;0.013;0.146
+ Mouka banánová;14.18;0.004;0.001;0.033
+ Mouka cizrnová;14.48;0.064;0.005;0.216
+ Mouka čiroková;14.86;0.03;0.002;0.073
+ Mouka čočková;13.85;0.016;0.001;0.239
+ Mouka fazolová;13.07;0.015;0.002;0.215
+ Mouka hořčičná;14.98;0.157;0.006;0.341
+ Mouka hrachová;13.38;0.018;0.002;0.193
+ Mouka jáhlová;14.71;0.015;0.004;0.085
+ Mouka ječná;14.55;0.017;0.003;0.083
+ Mouka ječná celozrnná;14.8;0.024;0.003;0.088
+ Mouka kukuřičná;15.1;0.04;0.005;0.078
+ Mouka lněná;14;0.118;0.008;0.33
+ Mouka lupinová;14.38;0.09;0.011;0.388
+ Mouka maková;13.61;0.113;0.011;0.32
+ Mouka ovesná;15.59;0.065;0.013;0.113
+ Mouka pohanková;14.79;0.026;0.002;0.11
+ Mouka prosná;15.27;0.03;0.007;0.129
+ Mouka pšeničná, hladká, světlá, T 530, obsah popela max. 0,6 % v suš.;14.6;0.017;0.002;0.119
+ Mouka pšeničná, hrubá, T 450,  obsah popela max. 0,5 % v suš.;14.6;0.014;0.002;0.109
+ Mouka pšeničná, chlebová;14.94;0.017;0.002;0.132
+ Mouka pšeničná, polohrubá,T 400, obsah popela max. 0,5 % v suš.;14.6;0.014;0.002;0.113
+ Mouka quinoi;14.95;0.07;0.005;0.139
+ Mouka rýžová;15.16;0.015;0.003;0.075
+ Mouka rýžová celozrnná;16.22;0.025;0.005;0.093
+ Mouka sladová;15.1;0.02;0.004;0.099
+ Mouka sójová odtučněná;13.28;0.018;0.003;0.5
+ Mouka sójová plnotučná;17.12;0.209;0.021;0.356
+ Mouka z pšenice Durum;14.8;0.012;0.001;0.123
+ Mouka z pšenice špaldy, celozrnná;14.57;0.018;0.002;0.134
+ Mouka ze svatojánského chleba;12.17;0.006;0;0.048
+ Mouka žitná;14.1;0.014;0.001;0.084
+ Mouka žitná, celozrnná;14.49;0.013;0.001;0.061
+ Mouka, pšeničná, celozrnná, T 1700, obsah popela max. 1,9 % v suš.;14.7;0.024;0.003;0.135
+ Mrkev;1.51;0.002;0;0.01
+ Mungo klíčky;13.25;0.015;0.005;0.233
+ Nápoj kokosový;6.55;0.153;0.135;0.013
+ Nápoj sójový, natural, sušený;20.38;0.259;0.039;0.044
+ Nashi;1.83;0.001;0;0.006
+ Nektarinky;2;0.003;0;0.011
+ Ocet kvasný;1.39;0;0;0
+ Oháňka hovězí;9.45;0.157;0.089;0.214
+ Okurky;0.48;0.001;0;0.008
+ Olej arganový;37;1;0.18;0
+ Olej babassový;36.9;0.998;0.798;0
+ Olej bavlníkový;37;0.999;0.213;0
+ Olej hořčičný;37;0.999;0.078;0
+ Olej hroznový;37;0.999;0.106;0
+ Olej kukuřičný;37;0.999;0.129;0
+ Olej kukuřičný klíčkový, lisovaný;37;1;0.111;0
+ Olej olivový;37;1;0.123;0
+ Olej palmový;37;0.999;0.419;0
+ Olej podzemnicový;37;0.999;0.146;0
+ Olej rybí (losos);37;1;0.145;0
+ Olej rýžový;36.93;0.998;0.232;0
+ Olej řepkový, nízkoerukový;36.93;0.998;0.068;0
+ Olej sezamový;36.89;0.997;0.166;0
+ Olej slunečnicový;37;1;0.102;0
+ Olej slunečnicový, s vysokým obsahem kyseliny olejové (nad 70 %);37;1;0.099;0
+ Olej sojový;37;0.999;0.151;0
+ Olej světlicový;37;0.999;0.094;0
+ Olej světlicový, s vysokým obsahem kys. olejové;37;1;0.075;0
+ Olej z jader manga (Mangifera indica);36.34;0.98;0.937;0.005
+ Olivy zelené, marinované;5.42;0.127;0.018;0.014
+ Olivy zralé (černé), konzervované;4.88;0.107;0.014;0.008
+ Omáčka houbová, maso hovězí vařené, knedlík houskový;6.6;0.055;0.031;0.1
+ Omáčka houbová, smetanová, domácí;4.43;0.075;0.05;0.031
+ Omáčka koprová, maso hovězí vařené, knedlík houskový;7.31;0.061;0.035;0.106
+ Omáčka koprová, smetanová domácí;5.63;0.099;0.068;0.031
+ Omáčka křenová, maso hovězí vařené, knedlík houskový;6.82;0.056;0.032;0.1
+ Omáčka křenová, smetanová, domácí;4.89;0.078;0.053;0.031
+ Omáčka rajčatová, domácí;4.44;0.08;0.053;0.019
+ Omáčka rajčatová, maso hovězí vařené, knedlík houskový;6.61;0.057;0.032;0.094
+ Omáčka sójová;2.35;0.001;0;0.075
+ Omáčka svíčková, maso hovězí vařené, knedlík houskový;7.68;0.073;0.044;0.094
+ Omáčka svíčková, smetanová, domácí;7.22;0.118;0.073;0.118
+ Opuncie (plody);2.7;0.004;0;0.009
+ Ořechy kešu;24.7;0.456;0.104;0.177
+ Ořechy lískové;27.24;0.614;0.055;0.144
+ Ořechy lískové loupané;28.69;0.665;0.063;0.144
+ Ořechy para;28.37;0.652;0.15;0.164
+ Ořechy pekan;29.33;0.696;0.065;0.121
+ Ořechy píniové;24.19;0.445;0.034;0.178
+ Ořechy pistáciové;25;0.5;0.056;0.201
+ Ořechy vlašské;27.4;0.612;0.054;0.163
+ Ostružiny;2.25;0.01;0;0.014
+ Otruby ovesné;15.39;0.073;0.012;0.157
+ Otruby pšeničné;11.55;0.057;0.007;0.168
+ Otruby žitné;11.7;0.028;0.003;0.146
+ Oves nahý;16.2;0.085;0.017;0.153
+ Palačinka se zavařeninou, trh;8.42;0.041;0.007;0.052
+ Pangasius dolnooký (Pangas), filety;3.47;0.019;0.006;0.163
+ Papaya melounová;1.69;0.001;0;0.006
+ Paprika sterilovaná;1.27;0.002;0;0.007
+ Paprika zeleninová, červená;1.24;0.004;0;0.013
+ Paprika zeleninová, zelená;0.87;0.003;0;0.009
+ Párek v rohlíku, trh;10.3;0.101;0.032;0.094
+ Párky debrecínské;11.8;0.24;0;0.152
+ Párky drůbeží;10.1;0.192;0.069;0.139
+ Párky jemné;12.3;0.268;0;0.129
+ Pastinák setý;2.8;0.005;0;0.013
+ Paštika játrová;13.1;0.28;0.096;0.142
+ Patizon;0.66;0.001;0;0.004
+ Pažitka;1.31;0.007;0;0.024
+ Pektin;10.72;0.006;0;0.109
+ Permeát mléčný;0.32;0.004;0.004;0
+ Petržel, kořen;2.22;0.005;0;0.026
+ Petržel, nať;2.26;0.004;0;0.043
+ Physalis, bobule;2.95;0.017;0.001;0.019
+ Piškoty dětské;16.6;0.049;0.014;0.11
+ Pivo světlé ležák, 12 %;1.89;0;0;0.005
+ Pivo světlé nealkoholické;0.63;0;0;0.001
+ Pivo světlé, výčepní, 10 %;1.6;0;0;0.003
+ Pivo tmavé, ležák, 12 %,;1.9;0;0;0.004
+ Pivo tmavé, výčepní, 10 %;1.57;0;0;0.003
+ Pizza Hawai, balená a mrazená, po MW úpravě;10.5;0.039;0.022;0.129
+ Pizza šunková, balená a mrazená, po MW úpravě;10.4;0.044;0.019;0.125
+ Pizza žampionová, balená a mrazená, po MW úpravě;9.54;0.019;0.007;0.106
+ Placky bramborové, domácí;9.86;0.082;0.012;0.078
+ Podmáslí;1.7;0.01;0.009;0.035
+ Podmáslí sušené;16.45;0.066;0.038;0.314
+ Pohanka - tatarka;14;0.031;0.005;0.105
+ Pohanka setá;14.5;0.029;0.004;0.131
+ Polévka bramborová, domácí;2.18;0.027;0.018;0.015
+ Pomelo;1.7;0.001;0;0.009
+ Pomeranče;2.09;0.002;0;0.009
+ Pórek;1.36;0.003;0;0.022
+ Prášek kakaový;16.05;0.206;0.126;0.221
+ Prášek kakaový, se sníženým obsahem tuku;13.35;0.109;0.066;0.25
+ Prášek pudinkový, kakaový;15.2;0.02;0.011;0.02
+ Prášek pudinkový, vanilkový;14.8;0.001;0;0.004
+ Proso;15.7;0.044;0.004;0.136
+ Protlak rajčatový;4.27;0.005;0;0.025
+ Prsty rybí, předsmažené, zmrazené;8.29;0.083;0.034;0.13
+ Pstruh duhový;6.71;0.096;0.021;0.186
+ Pšenice dvouzrnka;15.3;0.039;0.005;0.166
+ Pšenice jednozrnka;14.8;0.036;0.004;0.176
+ Pšenice ozimá;14.7;0.029;0.004;0.134
+ Quinoa, semena;14.7;0.061;0.008;0.124
+ Rajčata;0.88;0.002;0;0.009
+ Rajčata cherry;1.08;0.006;0;0.014
+ Rakytník sušený;15.5;0.167;0.054;0.114
+ Rebarbora;0.63;0;0;0.009
+ Retentát mléčný;1.37;0.006;0.003;0.057
+ Rohlík bílý;14.9;0.014;0;0.114
+ Rohlík sójový;12.4;0.027;0.005;0.068
+ Rosička;14.88;0.051;0.006;0.131
+ Rozinky bez jadérek;13.84;0.005;0.001;0.031
+ Rozinky s jadérky;13.3;0.005;0;0.025
+ Rukola;0.74;0.003;0;0.027
+ Rybíz bílý;2.18;0.011;0.001;0.011
+ Rybíz černý;2.58;0.003;0;0.012
+ Rybíz červený;2.05;0.002;0;0.011
+ Rýže loupaná;14.89;0.004;0;0.072
+ Rýže loupaná, dušená v nesolené vodě;5.97;0.002;0;0.026
+ Rýže neloupaná (natural);15;0.026;0;0.087
+ Rýže neloupaná (natural), dušená v nesolené vodě;6.91;0.012;0;0.036
+ Ředkev bílá;0.83;0.001;0;0.013
+ Ředkvička;0.45;0;0;0.006
+ Řepa červená;1.66;0.002;0;0.013
+ Sádlo kančí;26.33;0.677;0.168;0.076
+ Sádlo vepřové;36.9;0.995;0;0.002
+ Salám drůbeží;6.63;0.089;0;0.183
+ Salám lovecký;17.8;0.354;0;0.274
+ Salám šunkový;8.48;0.146;0;0.18
+ Salát bramborový, trh;6.55;0.108;0.009;0.018
+ Salát Coleslaw (firma KENTUCKY FRIED CHICKEN);5.39;0.097;0;0.016
+ Salát fazolový, trh;10.7;0.194;0.018;0.057
+ Salát hanácký, trh;5.64;0.118;0.009;0.017
+ Salát hermelínový, trh;13.4;0.31;0.06;0.101
+ Salát hlávkový;0.65;0.002;0;0.013
+ Salát holandský, trh;13.7;0.306;0.052;0.109
+ Salát islandský, trh;12.4;0.298;0.024;0.066
+ Salát jarní, trh;4.98;0.096;0;0.029
+ Salát kemping, trh;8.26;0.174;0.032;0.057
+ Salát kukuřičný, trh;4.23;0.032;0;0.021
+ Salát letní, trh;1.9;0.014;0;0.049
+ Salát mrkvový, trh;1.06;0.002;0;0.008
+ Salát pochoutkový, trh;10.2;0.224;0.038;0.06
+ Salát rybí, trh;11.9;0.27;0.025;0.06
+ Salát to-fu, trh;3.49;0.02;0;0.066
+ Salát vajíčkový, trh;7.42;0.157;0.022;0.055
+ Salát vlašský, trh;8.9;0.178;0.02;0.031
+ Salát zelný, trh;3.74;0.052;0;0.015
+ Sardel obecná (Ančovička);8.39;0.134;0.027;0.201
+ Sardinka evropská;6.61;0.089;0.029;0.195
+ Sardinky v oleji;9.21;0.14;0.028;0.237
+ Sardinky v rajčatové omáčce;6.79;0.099;0.028;0.17
+ Semena hořčice bílé;18.59;0.283;0.019;0.28
+ Semena lněná;20.05;0.335;0.038;0.217
+ Semena řeřichy;16.69;0.241;0.036;0.241
+ Semena sezamová;26.8;0.585;0.087;0.219
+ Semena slunečnicová;23.7;0.45;0.055;0.19
+ Semena tykvová (dýňová), sušená;23.54;0.453;0.079;0.338
+ Semena vojtěšky;13.25;0.085;0.012;0.34
+ Shiitake, čerstvé;1.41;0.004;0;0.039
+ Sirup glukózový;14.6;0;0;0
+ Sirup inulinový;13.7;0;0;0
+ Sirup javorový;11.5;0;0;0
+ Skořice mletá;9.73;0.019;0;0.038
+ Slad karamelový;14.55;0.025;0.006;0.09
+ Sleď obecný, filety bez kůže;7.91;0.126;0.029;0.191
+ Sleď obecný, filety s kůží;7.79;0.125;0.026;0.186
+ Smaženka, trh;9.97;0.132;0.014;0.075
+ Smažený sýr v housce s tatarskou omáčkou, trh;13.4;0.132;0.025;0.102
+ Smetana ke šlehání, 30 % tuku;12;0.3;0.194;0.024
+ Smetana ke šlehání, 33 % tuku;13.1;0.33;0.214;0.022
+ Smetana kysaná, min. 18 % tuku;7.8;0.18;0.117;0.028
+ Smetana kysaná, nízkotučná, 10 -12 % tuku;5.3;0.11;0.071;0.028
+ Smetana kysaná, nízkotučná, 15 % tuku;6.73;0.15;0.097;0.029
+ Smetana se sníženým obsahem tuku, (na vaření), 10 % tuku;4.92;0.1;0.065;0.029
+ Smetana se sníženým obsahem tuku, (na vaření), 12 % tuku;5.63;0.12;0.078;0.028
+ Sója;17.01;0.204;0;0.342
+" Sója extrudovaná (""maso"" sójové), kostky, neochucené";13.3;0.015;0.001;0.506
+ Sója, vařená v nesolené vodě;6;0.031;0;0.145
+ Sójový bílkovinný hydrolyzát;6.28;0.02;0.012;0.229
+ Srdce hovězí;4.9;0.053;0;0.169
+ Srdce kachní;5.35;0.065;0.014;0.15
+ Srdce kuřecí;4.24;0.047;0.011;0.138
+ Srdce vepřové;4.56;0.046;0;0.168
+ Stévie prášek;16.39;0;0;0.003
+ Strouhanka;15.1;0.01;0;0.097
+ Sůl jedlá;0;0;0;0
+ Sýr ovčí, Brynza;13.2;0.254;0;0.205
+ Sýr syrovátkový;7.47;0.142;0.091;0.083
+ Sýr, Akawi, 40 % t. v s.;10.6;0.198;0.128;0.178
+ Sýr, balkánský, 50 % t. v s.;10.3;0.205;0.133;0.147
+ Sýr, čerstvý, nezrající, 60 % t. v s.;12.3;0.265;0.172;0.123
+ Sýr, Eidam uzený, 40 % t. v s.;13.9;0.249;0.161;0.264
+ Sýr, Eidam, 30 % t. v s.;11.05;0.16;0.104;0.289
+ Sýr, Eidam, 50 %, t. v s.;15.6;0.303;0.196;0.247
+ Sýr, Gervais, 30 %, t. v s.;9.72;0.22;0.142;0.077
+ Sýr, Hermelín, 50 % t. v s.;12.3;0.223;0.144;0.224
+ Sýr, Imperiál, 50 % t. v s.;8.13;0.154;0.099;0.126
+ Sýr, Istanbuli, 40 % t. v s.;9.34;0.172;0.111;0.163
+ Sýr, Jadel, 40 % t. v s.;12.8;0.225;0.146;0.253
+ Sýr, Lučina, 70 % t. v s.;14.2;0.335;0.217;0.094
+ Sýr, Niva, 50 % t. v s.;14.3;0.289;0.187;0.2
+ Sýr, Olomoucké tvarůžky;5.76;0.01;0.006;0.303
+ Sýr, Pivní, 50 % t. v s.;12;0.24;0.155;0.173
+ Sýr, Romadur, 40 %  t. v s.;11.6;0.199;0.129;0.23
+ Sýr, tavený, jemný, Maratónec, 65 %, t. v s.;13.3;0.295;0.191;0.111
+ Sýr, tavený, nízkoenergetický, Lipno, 30 % t. v s.;7.75;0.114;0.074;0.19
+ Sýr, Tylžský, 50 % t. v s.;7.91;0.15;0.083;0.125
+ Sýr, Zlato, 50 % t. v s.;14.1;0.275;0.178;0.209
+ Sýr, Žervé, 50 % t. v s.;8.03;0.15;0.097;0.125
+ Syrovátka;0.88;0.002;0;0.005
+ Syrovátka sušená;15.6;0.006;0.004;0.127
+ Škrob bramborový;14;0.001;0;0.004
+ Škrob kukuřičný;14.9;0.001;0;0.003
+ Škrob kukuřičný modifikovaný;15.17;0.026;0.011;0.002
+ Škrob pšeničný;14.7;0.002;0;0.005
+ Škrob rýžový;14.6;0.004;0.002;0.009
+ Škrob tapiokový;15.02;0.003;0;0.001
+ Škubánky s mákem, domácí;9.13;0.097;0.042;0.043
+ Škvarky;32.2;0.792;0.306;0.169
+ Špalda;15.3;0.041;0.005;0.154
+ Špenát;1.06;0.004;0;0.026
+ Šrot sojový;12.71;0.019;0.003;0.45
+ Šrot žitný;13.12;0.014;0.002;0.08
+ Štika obecná, maso z celé ryby;3.34;0.004;0.001;0.188
+ Štikozubec obecný (štika mořská, hejk, merlůza), maso bez kostí, dušené;2.98;0.009;0.002;0.151
+ Štikozubec obecný (štika mořská, hejk, merlůza), maso bez kostí, pečené;2.66;0.008;0.002;0.139
+ Štikozubec obecný (štika mořská, hejk, merlůza), maso bez kostí, smažené;5.16;0.071;0.023;0.149
+ Štikozubec obecný (štika mořská, hejk, merlůza), maso bez kostí, syrové;2.65;0.01;0.002;0.134
+ Šunka drůbeží;5.13;0.044;0.013;0.206
+ Švestky;2.5;0.002;0;0.007
+ Švestky sušené;8.24;0.002;0.002;0.024
+ Temnoplodec (aronie);2.33;0.007;0;0.009
+ Těstoviny (špagety), dvouvaječné;15.03;0.021;0;0.099
+ Těstoviny (špagety), dvouvaječné, vařené v nesolené vodě;4.11;0.006;0;0.029
+ Těstoviny (špagety), nevaječné;14.93;0.01;0;0.103
+ Těstoviny (špagety), nevaječné, vařené v nesolené vodě;4.55;0.001;0;0.035
+ Těstoviny, bezvaječné, celozrnné;14.25;0.013;0;0.128
+ Těstoviny, bezvaječné, celozrnné, vařené v nesolené vodě;6.31;0.006;0;0.062
+ Tlamoun nilský (Tilápie);2.69;0.008;0.002;0.142
+ Tofu;3.16;0.042;0;0.078
+ Tolstolobík bílý;7.66;0.135;0.029;0.157
+ Treska aljašská, filet, bez kůže;2.79;0.002;0;0.16
+ Treska tmavá, filet, bez kůže;3.17;0.003;0;0.18
+ Treska, filé;2.92;0.003;0;0.165
+ Trhanka pšeničná;13.67;0.019;0.002;0.113
+ Trhanka žitná;13.35;0.016;0.002;0.09
+ Třešně;2.74;0.004;0.001;0.009
+ Tuk (olej) palmojádrový;37;0.999;0.441;0
+ Tuk bambucký;36.73;0.991;0.403;0.003
+ Tuk hovězí, (lůj);33.6;0.902;0.481;0.013
+ Tuk kokosový;37;0.999;0.842;0
+ Tuk máselný (vyhláška č. 77/2003 Sb.);36.84;0.995;0.63;0
+ Tuk pomazánkový rostlinný roztíratelný s nízkým obsahem tuku (20 %), Perla Tip, UNILEVER;7.4;0.2;0.063;0
+ Tuk rostlinný roztíratelný (72 %), Hera, UNILEVER;26.7;0.72;0.334;0
+ Tuk rostlinný roztíratelný (79 %), Hera Máslová příchuť, UNILEVER;29.3;0.79;0.37;0.001
+ Tuk rostlinný roztíratelný s nízkým obsahem tuku (30 %), Flora light, UNILEVER;11.1;0.3;0.062;0
+ Tuk rostlinný roztíratelný s nízkým obsahem tuku (35 %), Flora pro.activ, UNILEVER;13.2;0.345;0.078;0.001
+ Tuk rostlinný roztíratelný se sníženým obsahem tuku (45 %), Flora, UNILEVER;16.7;0.45;0.088;0.002
+ Tuk vepřový, syrový, separovatelný (odřezky);25.8;0.666;0.189;0.069
+ Tuňák modroploutvý;6.1;0.056;0.013;0.237
+ Tuňák modroploutvý, filet;4.4;0.006;0.002;0.245
+ Tuřín (brukev řepka);0.63;0.001;0;0.008
+ Tvaroh nízkotučný (jemný);4.6;0.031;0.019;0.173
+ Tvaroh odtučněný (měkký);2.79;0.002;0.001;0.122
+ Tvaroh polotučný;4.55;0.047;0.029;0.129
+ Tvaroh tučný;6.9;0.118;0.076;0.126
+ Tvaroh tvrdý;4.23;0.009;0.005;0.215
+ Tyčinky krabí, ze surimi;3.97;0.005;0.002;0.076
+ Tykev obecná;1.26;0.002;0;0.011
+ Vánočka (mazanec);14.64;0.105;0.041;0.083
+ Vejce slepičí;5.75;0.092;0.025;0.125
+ Vejce slepičí, bílek;2.01;0.001;0;0.106
+ Vejce slepičí, bílek, sušený;14.96;0.004;0.001;0.781
+ Vejce slepičí, celé, hmota sušená;21.72;0.304;0.081;0.488
+ Vejce slepičí, žloutek;12.16;0.252;0.067;0.15
+ Vejce slepičí, žloutek, sušený;26.84;0.554;0.149;0.331
+ Veka;11.8;0.01;0;0.087
+ Víno - hrozny;3.02;0.004;0.001;0.007
+ Víno bílé;3.06;0;0;0.002
+ Víno červené;3.12;0;0;0.003
+ Víno dezertní likérové, Sherry dry;4.87;0;0;0.002
+ Víno dezertní, kořeněné, Vermut;6.03;0;0;0.002
+ Víno šumivé, sekt;4.23;0;0;0.002
+ Višně;2.34;0.005;0.001;0.01
+ Vláknina jablečná;10.77;0.066;0.008;0.076
+ Vláknina pšeničná;11.01;0.058;0.009;0.17
+ Vločky bramborové;14.65;0.008;0.006;0.077
+ Vločky ječné;14.4;0.022;0.004;0.089
+ Vločky ovesné;14.88;0.058;0.01;0.131
+ Vločky pohankové;14.82;0.027;0.005;0.115
+ Vločky pšeničné;14.17;0.022;0.004;0.1
+ Vločky rýžové;15.17;0.026;0.008;0.083
+ Vločky sójové;16.76;0.22;0.033;0.383
+ Vločky špaldové;14.35;0.026;0.005;0.141
+ Vločky žitné;13.74;0.016;0.002;0.071
+ Vosk karnaubský;36.64;0.987;0.66;0.003
+ Výrobek mléčný, Tradiční pomazánkové (dříve Pomazánkové máslo);13.3;0.32;0.207;0.03
+ Zajíc, maso z celého kusu;4.05;0.011;0.004;0.214
+ Zajíc, stehna;4.74;0.021;0.007;0.233
+ Zákys smetanový;1.74;0.016;0.011;0.033
+ Zázvor;1.15;0.002;0;0.011
+ Zelí čínské;0.71;0.003;0;0.012
+ Zelí hlávkové, bílé;1.23;0.002;0;0.016
+ Zelí hlávkové, červené;1.22;0.002;0;0.016
+ Žaludky kachní;4.45;0.034;0.01;0.188
+ Žaludky kuřecí;3.07;0.014;0.004;0.15
+ Žaludky vepřové;4.7;0.039;0.018;0.187
+ Žampiony;0.98;0.003;0;0.029
+ Želatina jedlá, vepřová;15;0;0;0.88
+ Žito ozimé;14.67;0.031;0.004;0.089

@@ -1,0 +1,61 @@
+#toto delam v prikazove radce!
+
+#tvorba virtualniho prostredi:
+virtualenv-3 .env
+
+#aktivace virtualniho prostredi tak, aby se v nemo mohlo pracovat
+source .env/bin/activate 
+
+#instalace flasku
+pip install flask
+
+#kdyz mam uz nejaky program udelany v pythonu, tak ho pustim:
+FLASK_APP=Nazev_programu.py flask run
+
+# vyjedou mi nejake informace a na poslednim radku vyjede webova adresa, na ktere program pojede.
+
+#instalace knihovny pro komunikaci s postgresem (v prikazove radce)
+pip install psycopg2-binary 
+
+#jak se dostanu zpet do virtualniho prostredi, kdyz jsem predtim pracovala na necem jinem v prikazove radce?
+# prvne si necham vypsat vsechny (i skryte soubory na danem miste)
+ls -la
+#tam vidim, ze tam nejake virtualni prostredi mam (.env)
+#abych se do virtualniho prostredi dostala, tak napisu:
+source .env/bin/activate
+
+#kdyz chci vypsat vsechny stahle knihovny, tak napisu:
+pip freeze
+
+
+
+#--------------------------------------------------------------------------------------------
+#DOKUMENTACE KE KNIHOVNE:
+
+import psycopg2
+
+# Connect to an existing database
+conn = psycopg2.connect("dbname=test user=postgres")
+
+# Open a cursor to perform database operations
+cur = conn.cursor()
+
+#Execute a command: this creates a new table
+cur.execute("CREATE TABLE test (id serial PRIMARY KEY, num integer, data varchar);")
+
+# Pass data to fill a query placeholders and let Psycopg perform
+# the correct conversion (no more SQL injections!)
+cur.execute("INSERT INTO test (num, data) VALUES (%s, %s)",
+...      (100, "abc'def"))
+
+# Query the database and obtain data as Python objects
+cur.execute("SELECT * FROM test;")
+cur.fetchone()
+(1, 100, "abc'def")
+
+# Make the changes to the database persistent
+conn.commit()
+
+# Close communication with the database
+cur.close()
+conn.close()
