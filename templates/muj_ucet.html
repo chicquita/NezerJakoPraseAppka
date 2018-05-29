@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Smart Food Planner</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../static/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="/">SFP <span>by ADA & JANA </span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="/">Domů</a></li>
+					<li><a href="generic">Můj účet</a></li>
+					<li><a href="zasoby">Zásoby</a></li>
+					<li><a href="jidelnicek">Jídelníček</a></li>
+				</ul>
+			</nav>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Section -->
+					<section class="wrapper">
+						<div class="inner">
+							<header class="align-center">
+								<h1>Můj účet</h1>
+								<p>Zde si můžeš zadat potraviny, které máš k dispozici a nechat si vygenerovat jídelníček na celý den splňující tvůj ideální denní příjem kj.</p>
+							</header>
+							<div class="flex flex-2">
+								<div class="col col2">
+									<h3>Seznam potravin</h3>
+									<p>Zadej potraviny, které máš k dispozici:</p>							
+									<form method="post" action="#">
+										<div class="row uniform">
+											<div class="9u 12u$(small)">
+												<input type="text" name="query" id="query" value="" placeholder="Název potraviny" />
+											</div>
+											<div class="3u$ 12u$(small)">
+												<input type="submit" value="Hledej" class="fit" />
+											</div>
+										</div>
+									</form>
+									<div Hodnota parametru {{hodnotaParametruQuery}} style="display:none"></div>
+								</div>
+								<div class="col col1 first">
+									<div class="image round fit">
+										<img src="../static/images/pic06.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section class="wrapper style1">
+						<div class="inner">
+							<header class="align-center">
+								<h2>Denní jídelníček</h2>
+								<p>Vygeneruj si jídelníček na celý den nebo třeba jenom snídani.</p>
+							</header>
+							<!-- Table -->
+								<div class="flex flex-2">
+									<div class="col col2">
+										<h3>Volba denního chodu</h3>
+										<div class="col col1 first">
+											<div class="image round fit">
+												<img src="../static/images/pic07.jpg" alt="" />
+											</div>
+										</div>
+									<div>
+										<form method="post" action="#">
+											<table class="alt">
+												<tbody>
+													<tr>
+														<td>Snídaně</td>
+														<td><input type="checkbox" name="is_snidane" value="True" id="is_snidane" checked><label for="is_snidane"></label></td>
+													</tr>
+													<tr>
+														<td>Dopolední svačina</td>
+														<td><input type="checkbox" name="is_svacina_dopo" value="True" id="is_svacina_dopo" checked><label for="is_svacina_dopo"></label></td>
+													</tr>
+													<tr>
+														<td>Oběd</td>
+														<td><input type="checkbox" name="is_obed" value="True" id="is_obed" checked><label for="is_obed"></label></td>
+													</tr>
+													<tr>
+														<td>Odpolední svačina</td>
+														<td><input type="checkbox" name="is_svacina_odpo" value="True" id="is_svacina_odpo" checked><label for="is_svacina_odpo"></label></td>
+													</tr>
+													<tr>
+														<td>Večeře</td>
+														<td><input type="checkbox" name="is_vecere" value="True" id="is_vecere" checked><label for="is_vecere"></label></td>
+													</tr>
+												</tbody>
+												<tfoot>
+													<tr>
+														<td><input type="reset" value="Resetuj" name="reset"></td>
+														<td><input type="submit" value="Generuj"></td>
+													</tr>
+												</tfoot>
+											</table>
+										</form>
+								</div>
+                      <!-- jidelnicek-->
+		                      	<div style="display: {{zobrazJidelnicek}};">
+									<div style="display: {{zobrazSnidane}};">
+										<h2>Snídaně</h2>
+										<div class="table-wrapper">
+											<table class="alt">
+												{{jidelnicek_snidane|safe}}
+											</table>
+										</div>
+									</div>
+									<div style="display: {{zobrazSvacinaDopo}};">
+										<h2>Dopolední svačina</h2>
+										<div class="table-wrapper">
+											<table class="alt">
+												{{jidelnicek_svacina_dopo|safe}}
+											</table>
+										</div>
+									</div>
+									<div style="display: {{zobrazObed}};">
+										<h2>Oběd</h2>
+										<div class="table-wrapper">
+											<table class="alt">
+												{{jidelnicek_obed|safe}}
+											</table>
+										</div>
+									</div>
+									<div style="display: {{zobrazSvacinaOdpo}};">
+										<h2>Odpolední svačina</h2>
+										<div class="table-wrapper">
+											<table class="alt">
+												{{jidelnicek_svacina_odpo|safe}}
+											</table>
+										</div>
+									</div>
+									<div style="display: {{zobrazVecere}};">
+										<h2>Večeře</h2>
+										<div class="table-wrapper">
+											<table class="alt">
+												{{jidelnicek_vecere|safe}}
+											</table>
+										</div>
+									</div>
+								</div>			
+						</div>			
+					</section>
+<!-- Section -->
+					<section class="wrapper">
+						<div class="inner">
+							<header class="align-center">
+								<h2>Seznam zásob</h2>
+							</header>
+							<div class="flex flex-3">
+								<div class="col align-center">
+							</div>
+						</div>
+					
+					<!-- Table -->
+						<div class = "inner">	
+							{{tabulka_zasob|safe}}
+						</div>
+					</section>
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<p>&copy; Smart Food Planner. All rights reserved.</p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="../static/js/jquery.min.js"></script>
+			<script src="../static/js/jquery.scrolly.min.js"></script>
+			<script src="../static/js/jquery.scrollex.min.js"></script>
+			<script src="../static/js/skel.min.js"></script>
+			<script src="../static/js/util.js"></script>
+			<script src="../static/js/main.js"></script>
+
+	</body>
+</html>

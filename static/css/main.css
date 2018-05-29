@@ -2,12 +2,6 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Scope+One|Trocchi");
 
-/*
-	Urban by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
-
 /* Reset */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -2876,7 +2870,7 @@
 	}
 
 		.wrapper .inner {
-			margin: 0 auto;
+			margin: auto ;
 			width: 80em;
 			position: relative;
 			z-index: 99;
@@ -3705,7 +3699,7 @@
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
 		justify-content: center;
-		background-image: url("../../static/images/banner.jpg");
+		background-image: url("../images/banner.jpg");
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -3868,7 +3862,8 @@
 		padding: 6em 2em 4em 2em;
 	}
 
-		#footer > .inner {
+		#footer > .
+	 {
 			margin: 0 auto;
 			width: 80em;
 		}
