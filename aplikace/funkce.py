@@ -270,6 +270,78 @@ def vytvor_obed (kj_potrebne_obed):
 	zbyle_KJ_z_kategorie = obed_K3[0]
 	return(zbyle_KJ_z_kategorie, obed_K1[1] + obed_K2[1] + obed_K3[1])
 
-# u kategorii 80,82 kam se hodi knedliky a testoviny jako prolohy se
-# stalo, ze v databazi nebyla potravina pro prilohu. Ukol, v techto 
-# pripadech napsat "Nemas dostatecne mnozstvi potravin pro prilohu"
+
+def vytvor_veceri(kj_potrebne_vecere):
+	seznam_hlavnich_jidel = ["maso_rostlinne_alternativy_syra","ryby", 
+	"lusteniny", "mc_donald", "pecivo", "uzeniny", "polevky", 
+	"pizza", "salaty",	"jogurty_a_mlecne_vyrobky", "tlacenky", 
+	"chlebicky", "testoviny"]
+	zakladni_kosik = vyber_zakladni_kosik(seznam_hlavnich_jidel, 
+		kategorie.vecere)
+	kosik_3 = "zelenina" 
+
+	if zakladni_kosik is "maso_rostlinne_alternativy_syra":
+		priloha = "prilohy_k_masu_nebo_rostl_alt_syra"
+	elif zakladni_kosik is "ryby":
+		priloha = "prilohy_k_rybam"
+	elif zakladni_kosik is "lusteniny":
+		priloha = "prilohy_k_lusteninam"
+	elif zakladni_kosik is "pecivo":
+		priloha = "prilohy_k_pecivu"
+	elif zakladni_kosik is "uzeniny":
+		priloha = "prilohy_k_uzeninam"
+	elif zakladni_kosik is "polevky":
+		priloha = "prilohy_k_polevkam"
+		kosik_3 = None
+	elif zakladni_kosik is "salaty":
+		priloha = "prilohy_k_salatum"
+		kosik_3 = None
+	elif zakladni_kosik is "jogurty_a_mlecne_vyrobky":
+		priloha = "prilohy_k_jogurtum_a_mlecnym vyrobkum"
+		kosik_3 = "ovoce"
+	elif zakladni_kosik is "tlacenky":
+		priloha = "prilohy_k_tlacenkam"
+	elif zakladni_kosik is "testoviny":
+		priloha = "prilohy_k_testovinam"
+	elif zakladni_kosik is "chlebicky":
+		priloha = None
+	elif zakladni_kosik is "pizza":
+		priloha = None
+		kosik_3 = None
+	elif zakladni_kosik is "mc_donald":
+		priloha = None
+		kosik_3 = None
+
+
+	if priloha is not None:
+		KJ = 0.5
+		if zakladni_kosik is "salaty": # aby mi to nehazelo 1,5 kg salatu na obed
+			KJ = 0.1
+	else:
+		KJ = 0.8
+
+	vecere_K1 = logika_vypoctu(kategorie.vecere[zakladni_kosik], 
+		kj_potrebne_vecere*KJ)
+
+
+	if priloha is not None:
+		KJ = 0.3
+
+		if zakladni_kosik is "salaty":
+			KJ = 0.9
+		if kosik_3 is None:
+			KJ = 0.5
+		vecere_K2 = logika_vypoctu(kategorie.vecere[priloha], 
+			kj_potrebne_vecere*KJ + vecere_K1[0])
+	else:
+		vecere_K2 = (vecere_K1[0],[])
+	
+
+	if kosik_3:
+		vecere_K3 = logika_vypoctu(kategorie.vecere[kosik_3], 
+			kj_potrebne_vecere*0.2 + vecere_K2[0])
+	else:
+		vecere_K3 = (vecere_K2[0],[])
+
+	zbyle_KJ_z_kategorie = vecere_K3[0]
+	return(zbyle_KJ_z_kategorie, vecere_K1[1] + vecere_K2[1] + vecere_K3[1])

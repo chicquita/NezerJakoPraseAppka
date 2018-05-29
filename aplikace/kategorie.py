@@ -43,9 +43,40 @@ obed = {
 	"pizza":[6],
 	"piti" : [41, 42, 43, 44, 45, 46],
 	"salaty" : [86],
-	"prilohy_k_salatum" : [13, 15, 62, 19, 24, 25, 18, 22, 31, 32, 34],
+	"prilohy_k_salatum" : [13, 15, 62, 19, 25, 18, 22, 31, 32, 34],
 	"testoviny" : [78, 85],
-	"prilohy_k_testovinam" : [13, 15, 62, 19, 23, 24, 25, 47, 18, 19, 22, 31, 32, 34],
+	"prilohy_k_testovinam" : [13, 15, 62, 19, 23, 25, 47, 18, 19, 22, 31, 32, 34],
 	"ovoce" : [53],
-	"zelenina" : [55, 69]
+	"zelenina" : [55, 69],
+	"spagety": [85],
+	"prilohy_ke_spagetam": [13, 15, 62, 19, 23, 25, 47, 18, 19, 22, 31, 32, 34]
+}
+
+
+vecere = {
+	"maso_rostlinne_alternativy_syra" :[13, 15, 23, 25, 62],
+	"prilohy_k_masu_nebo_rostl_alt_syra":[10, 78, 81, 79, 56, 57, 79],
+	"ryby":[19],
+	"prilohy_k_rybam" :[10, 79],
+	"lusteniny" :[50],
+	"prilohy_k_lusteninam": [14, 16, 22],
+	"pecivo": [56, 57, 79, 83],
+	"prilohy_k_pecivu": [14, 16, 17, 12, 18, 20, 31, 32, 33, 34, 76, 21, 22],
+	"uzeniny": [14, 16],
+	"prilohy_k_uzeninam": [56],
+	"polevky": [7, 8, 9],
+	"prilohy_k_polevkam" : [56],
+	"salaty": [86],
+	"prilohy_k_salatum": [13, 15, 62, 19, 25, 18, 22, 31, 32, 34],
+	"jogurty_a_mlecne_vyrobky": [26, 27, 35, 28],
+	"prilohy_k_jogurtum_a_mlecnym vyrobkum": [52, 53, 70],
+	"tlacenky": [76],
+	"prilohy_k_tlacenkam": [56],
+	"testoviny" : [78, 85],
+	"prilohy_k_testovinam" : [13, 15, 62, 19, 23, 25, 47, 18, 19, 22, 31, 32, 34],
+	"chlebicky": [87],
+	"pizza":[6],
+	"mc_donald": [5],
+	"zelenina": [55],
+	"ovoce": [53]
 }
