@@ -4,7 +4,7 @@ import psycopg2
 from polozka_jidelnicku import Polozka_jidelnicku
 from dbHelper import DbHelper
 from baseVypocet import BaseVypocet         #baseVypocet obsahuje testovaci hodnoty pro jidelnicek
-from vypocetDbBased import vypocetDbBased    
+from vypocetDbBased import VypocetDbBased    
 '''vypocetDbBased: generovani jidelnicku zalozeno na selectech z DB 
 (DB pracuje navic s tabulkami pattern, pattern_line, pattern_line_set) narozdil od vypoctu zalozenem na pythonu'''
 
