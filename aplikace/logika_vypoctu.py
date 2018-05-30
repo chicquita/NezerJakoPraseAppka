@@ -13,8 +13,8 @@ kj_potrebne_snidane = int(denni_prijem_kj/100*20)
 #kj_potrebne_snidane = 100000															# doporucene rozlozeni chodu: snidane 20-25%
 kj_potrebne_svacina1 = int(denni_prijem_kj/100*10)			# svacina 10-15%
 kj_potrebne_obed = int(denni_prijem_kj/100*35)				# obed 30-35%
-kj_potrebne_svacina2 = int(denni_prijem_kj/100*15)			# svacina 10-15%
-kj_potrebne_vecere = int(denni_prijem_kj/100*20)			# vecere 15-20%
+kj_potrebne_svacina2 = int(denni_prijem_kj/100*10)			# svacina 10-15%
+kj_potrebne_vecere = int(denni_prijem_kj/100*25)			# vecere 15-20%
 
 
 kategorie.TABULKA_ZASOB = funkce.velky_select()
@@ -52,6 +52,16 @@ print("Zbyle KJ z vecere: {}".format(vecere[0]))
 
 print()
 
+
+
+print("SVACINA_1")
+print("KJ POTREBNE Ke SVACINE 1: {}".format(kj_potrebne_svacina1))
+svacina_1 = funkce.vytvor_svacinu(kj_potrebne_svacina1)
+for i in svacina_1[1]:
+	print("{}, {} {}, {:.0f} Kj".format(i[0], i[1], i[2], i[3]))
+print("Zbyle KJ ze svaciny: {}".format(svacina_1[0]))
+
+print()
 
 
 #kdyz to vybere kategorii, kde nic nemam v zasobach, musi to vybrat jinou kategorii!!!!

@@ -80,3 +80,17 @@ vecere = {
 	"zelenina": [55],
 	"ovoce": [53]
 }
+
+
+svacina = {
+	"krehky_chleb_knackebrot" : [57],
+	"prilohy_pro_krehky_chleb_knackebrot" : [18, 31, 32, 33, 34],
+	"jogurty_a_mlecne_vyrobky" : [26, 27, 35],
+	"prilohy_pro_jogurty_a_mlecne_vyrobky" : [52, 53, 54],
+	"kysane_mlecne_napoje" : [28],
+	"prilohy_pro_kysane_mlecne_napoje" : [52, 53, 54],
+	"ovoce" : [53],
+	"prilohy_pro_ovoce" : [64, 52],
+	"sladkosti" : [64, 65, 66, 54],
+	"prilohy_pro_sladkosti" : [53]
+}

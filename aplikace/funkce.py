@@ -353,3 +353,29 @@ def vytvor_veceri(kj_potrebne_vecere):
 
 	zbyle_KJ_z_kategorie = vecere_K3[0]
 	return(zbyle_KJ_z_kategorie, vecere_K1[1] + vecere_K2[1] + vecere_K3[1])
+
+	
+
+def vytvor_svacinu(kj_potrebne_svacina):
+	seznam_hlavnich_jidel = ["krehky_chleb_knackebrot", "jogurty_a_mlecne_vyrobky", 
+	"kysane_mlecne_napoje", "ovoce", "sladkosti"]
+	zakladni_kosik = vyber_zakladni_kosik(seznam_hlavnich_jidel, 
+		kategorie.svacina)
+	if zakladni_kosik is "krehky_chleb_knackebrot":
+		priloha = "prilohy_pro_krehky_chleb_knackebrot"
+	elif zakladni_kosik is "jogurty_a_mlecne_vyrobky":
+		priloha = "prilohy_pro_jogurty_a_mlecne_vyrobky"
+	elif zakladni_kosik is "kysane_mlecne_napoje":
+		priloha = "prilohy_pro_kysane_mlecne_napoje"
+	elif zakladni_kosik is "ovoce":
+		priloha = "prilohy_pro_ovoce"
+	elif zakladni_kosik is "sladkosti":
+		priloha = "prilohy_pro_sladkosti"
+
+	svacina_K1 = logika_vypoctu(kategorie.svacina[zakladni_kosik], 
+		kj_potrebne_svacina*0.7)
+	svacina_K2 = logika_vypoctu(kategorie.svacina[priloha], 
+		kj_potrebne_svacina*0.3 + svacina_K1[0])
+	zbyle_KJ_z_kategorie = svacina_K2[0]
+	
+	return(zbyle_KJ_z_kategorie, svacina_K1[1] + svacina_K2[1])
