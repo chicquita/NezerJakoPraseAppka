@@ -16,7 +16,7 @@ from vypocetDbBased import VypocetDbBased
 DB = DbHelper("ada", "ada", "To heslo ti nereknu")               
 #v DBHelperu je obsazeno napojeni do DB a zakladni selecty (select_all,single row, single value)
 
-VYPOCET = VypocetDbBased()        #sem se hodi nazev jancinyho filu s vypoctem
+VYPOCET = BaseVypocet()        #sem se hodi nazev jancinyho filu s vypoctem
 
 app = Flask(__name__)
 
@@ -39,16 +39,16 @@ def get_snidane():
 
 #pro ostatni funkce poucivam prozatim testovaci hodnoty z BaseVypocet(tam jsou polozky jidelnicku napsany natvrdo v kodu, nejsou tahane z DB)
 def get_svacina_dopo():
-    return BaseVypocet.get_svacina_dopo()
+    return VYPOCET.get_svacina_dopo()
               
 def get_obed():
-  return BaseVypocet.get_obed()
+  return VYPOCET.get_obed()
 
 def get_svacina_odpo():
-  return BaseVypocet.get_svacina_odpo()
+  return VYPOCET.get_svacina_odpo()
 
 def get_vecere():
-  return BaseVypocet.get_vecere()
+  return VYPOCET.get_vecere()
 
 
 #------------------------JIDELNICEK HTML-----------------------

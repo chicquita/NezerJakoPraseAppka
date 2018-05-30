@@ -78,7 +78,7 @@ def velky_select():
 	'''
 	return select_all("""SELECT 
 		p.nazev, z.baleni, p.kj, mj.zkratka, z.baleni * p.kj, p.id_kategorie
-		FROM zasoby z 
+		FROM test_zasoby z 
 		JOIN potraviny p on z.id_potraviny = p.id 
 		JOIN merna_jednotka mj on p.id_merna_jednotka = mj.id""")
 
@@ -379,3 +379,6 @@ def vytvor_svacinu(kj_potrebne_svacina):
 	zbyle_KJ_z_kategorie = svacina_K2[0]
 	
 	return(zbyle_KJ_z_kategorie, svacina_K1[1] + svacina_K2[1])
+
+def nacti_zasoby():
+	kategorie.TABULKA_ZASOB = velky_select()
