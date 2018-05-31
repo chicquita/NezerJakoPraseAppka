@@ -87,3 +87,33 @@ VECERE
 KJ POTREBNE K VECERI: -22
 Zbyle KJ z vecere: -17.6
 '''
+'''
+SNIDANE
+KJ POTREBNE KE SNIDANI: 1400
+Štola, 43 g, 710 Kj
+Nektarinky, 181 g, 272 Kj
+Arašídy, 14 g, 351 Kj
+Bikava sušená s cukrem, 4 g, 72 Kj
+Zbyle KJ ze snidane: -3
+
+OBED
+KJ POTREBNE K OBEDU: 2448
+Čočka, 85 g, 1224 Kj
+Čabajka, 34 g, 745 Kj
+Červená řepa, 240 g, 480 Kj
+Zbyle KJ z obedu: 0
+
+VECERE
+KJ POTREBNE K VECERI: 1751
+Křehký chléb Active, 59 g, 885 Kj
+Apetito - 58% t. v suš., 34 g, 524 Kj
+Červená řepa, 172 g, 344 Kj
+Zbyle KJ z vecere: 0
+
+SVACINA_1
+KJ POTREBNE Ke SVACINE 1: 700
+Nektarinky, 241 g, 362 Kj
+Pomeranče, 245 g, 490 Kj
+Arašídy, 14 g, 351 Kj
+Zbyle KJ ze svaciny: -13
+'''
