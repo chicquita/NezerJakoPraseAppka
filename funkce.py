@@ -145,7 +145,7 @@ def logika_vypoctu(kategorie_ID, KJ, max_pocet_potravin=None):
 
 		if jidlo["vysledne_KJ"] >= KJ - float(spotrebovane_KJ):
 			# tady řešíme možnost, že vybrané jídlo má hned na první pokus více KJ než potřebných
-			pouzita_gramaz = math.ceil(float(jidlo["baleni"]*KJ)/float(jidlo["vysledne_KJ"]))
+			pouzita_gramaz = math.ceil(float(jidlo["baleni"])*(KJ - spotrebovane_KJ)/float(jidlo["vysledne_KJ"]))
 			#print(pouzita_gramaz)
 			zbyla_gramaz = jidlo["baleni"]-pouzita_gramaz
 			#print(zbyla_gramaz)
