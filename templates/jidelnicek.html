@@ -37,43 +37,38 @@
 							</header>
 						</div>
 			<!-- Table - VOLBA CHODU -->
-								<div>
-										<form method="post" action="#">
-											<table class="alt">
-												<tbody>
-													<tr>
-														<td>Snídaně</td>
-														<td><input type="checkbox" name="is_snidane" value="True" id="is_snidane" checked><label for="is_snidane"></label></td>
-													</tr>
-													<tr>
-														<td>Dopolední svačina</td>
-														<td><input type="checkbox" name="is_svacina_dopo" value="True" id="is_svacina_dopo" checked><label for="is_svacina_dopo"></label></td>
-													</tr>
-													<tr>
-														<td>Oběd</td>
-														<td><input type="checkbox" name="is_obed" value="True" id="is_obed" checked><label for="is_obed"></label></td>
-													</tr>
-													<tr>
-														<td>Odpolední svačina</td>
-														<td><input type="checkbox" name="is_svacina_odpo" value="True" id="is_svacina_odpo" checked><label for="is_svacina_odpo"></label></td>
-													</tr>
-													<tr>
-														<td>Večeře</td>
-														<td><input type="checkbox" name="is_vecere" value="True" id="is_vecere" checked><label for="is_vecere"></label></td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td><input type="reset" value="Resetuj" name="reset"></td>
-														<td><input type="submit" value="Generuj"></td>
-													</tr>
-												</tfoot>
-											</table>
-										</form>
-								</div>
-					</section>
-			</div>
+						<form method="post" action="#">
+							<table class="alt">
+								<tbody>
+									<tr>
+										<td>Snídaně</td>
+										<td><input type="checkbox" name="is_snidane" value="True" id="is_snidane" checked><label for="is_snidane"></label></td>
+									</tr>
+									<tr>
+										<td>Dopolední svačina</td>
+										<td><input type="checkbox" name="is_svacina_dopo" value="True" id="is_svacina_dopo" checked><label for="is_svacina_dopo"></label></td>
+									</tr>
+									<tr>
+										<td>Oběd</td>
+										<td><input type="checkbox" name="is_obed" value="True" id="is_obed" checked><label for="is_obed"></label></td>
+									</tr>
+									<tr>
+										<td>Odpolední svačina</td>
+										<td><input type="checkbox" name="is_svacina_odpo" value="True" id="is_svacina_odpo" checked><label for="is_svacina_odpo"></label></td>
+									</tr>
+									<tr>
+										<td>Večeře</td>
+										<td><input type="checkbox" name="is_vecere" value="True" id="is_vecere" checked><label for="is_vecere"></label></td>
+									</tr>
+								</tbody>
+							</table>
+							<div><input type="submit" value="Generuj"></div>
+						</form>
+				</div>
+	</section>
 			<!-- Table JIDELNICEK -->
+				<section class = "wrapper">
+					<div class = "inner">
 						<div style="display: {{zobrazJidelnicek}};">
 							<div style="display: {{zobrazSnidane}};">
 								<h2>Snídaně</h2>
@@ -115,8 +110,10 @@
 									</table>
 								</div>
 							</div>
+							<div><input type="submit" value="Potvrď" name="potvrď"></div>
 						</div>
-			</div>			
+				</section>
+			</div>		
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="copyright">
