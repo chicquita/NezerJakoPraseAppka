@@ -166,7 +166,7 @@ def logika_vypoctu(kategorie_ID, KJ, max_pocet_potravin=None):
 		
 		else:
 			#ted mame nedostatek KJ, tak chceme vybrat jidlo s nejvice KJ a pouzit ho do naseho vyberu
-			spotrebovane_KJ = jidlo["vysledne_KJ"] + spotrebovane_KJ
+			spotrebovane_KJ = float(jidlo["vysledne_KJ"]) + spotrebovane_KJ
 			#print(vybrane_jidlo)
 			kategorie.TABULKA_ZASOB.remove(vybrane_jidlo)
 			jidla_z_kategorii.remove(vybrane_jidlo)
