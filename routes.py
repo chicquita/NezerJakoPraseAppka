@@ -61,6 +61,7 @@ def jidelnicek():
   else:
     zobrazJidelnicek = "None"
 
+  VYPOCET.nacti_zasoby() #zepta se to do databaze velkym selectem a vrati to promennou kategorie.TABULKA_ZASOB
   if request.method=='POST':
     is_snidane = request.form.get('is_snidane', False)
     is_svacina_dopo = request.form.get('is_svacina_dopo', False)

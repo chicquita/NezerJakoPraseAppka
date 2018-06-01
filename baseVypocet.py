@@ -7,7 +7,6 @@ import funkce
 class BaseVypocet():
 
 	def __init__(self):
-		funkce.nacti_zasoby()
 		self.db = DbHelper("janicka", "janicka", "Tajne heslo, ktere neni na githubu")
 		self.denni_prijem_kj = self.db.select_single_value("SELECT u.denni_prijem_kj FROM uzivatel u WHERE id = 1")
 		self.kj_potrebne_snidane = int(self.denni_prijem_kj/100*20)			 # snidane 20%
@@ -17,6 +16,9 @@ class BaseVypocet():
 
 		self.prebytek_ze_snidane = 0
 		self.prebytek_z_obeda = 0
+
+	def nacti_zasoby(self):
+		funkce.nacti_zasoby() # toto je zde, aby se tabulka nenacitala hned po spusteni serveru
 
 	def _formatuj_vystup(self,jidla):
 		vypis = []
