@@ -268,8 +268,10 @@ def vytvor_obed (kj_potrebne_obed):
 		zelenina_ovoce = "ovoce"
 		
 		
-	
-	if zakladni_kosik not in["salaty", "mc_donald", "pizza"]:
+	nechci_k_jidlu_zeleninu = ["hotove_jidlo_hodi_se_knedliky", 
+	"hotove_jidlo_hodi_se_knedliky_nebo_testoviny", 
+	"hotove_jidlo_netreba_priloha", "salaty", "mc_donald", "pizza"]
+	if zakladni_kosik not in nechci_k_jidlu_zeleninu:
 		obed_K3 = logika_vypoctu(kategorie.obed[zelenina_ovoce], 
 			kj_potrebne_obed*0.2 + obed_K2[0])
 	else:
