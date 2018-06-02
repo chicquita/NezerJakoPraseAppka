@@ -94,6 +94,7 @@ def jidelnicek():
   tabulka_jidelnicek_obed = None
   tabulka_jidelnicek_svacina_odpo = None
   tabulka_jidelnicek_vecere = None
+  nedostatek_potravin = False
  
   if request.method == "POST":
     VYPOCET.nacti_zasoby() #zepta se to do databaze velkym selectem a vrati to promennou kategorie.TABULKA_ZASOB
@@ -110,7 +111,8 @@ def jidelnicek():
       if is_vecere:
         tabulka_jidelnicek_vecere = Jidelnicek(get_vecere())
     except IndexError as ie:
-      return "Nedostatečné množství zásob.{}".format(ie)
+      nedostatek_potravin = True
+      #return "Nedostatečné množství zásob.{}".format(ie)
 
   #vyprintovani html
   return render_template("jidelnicek.html",
@@ -124,7 +126,8 @@ def jidelnicek():
     jidelnicek_svacina_dopo = tabulka_jidelnicek_svacina_dopo.__html__() if tabulka_jidelnicek_svacina_dopo else None, 
     jidelnicek_obed = tabulka_jidelnicek_obed.__html__() if tabulka_jidelnicek_obed else None,  
     jidelnicek_svacina_odpo = tabulka_jidelnicek_svacina_odpo.__html__() if tabulka_jidelnicek_svacina_odpo else None, 
-    jidelnicek_vecere = tabulka_jidelnicek_vecere.__html__() if tabulka_jidelnicek_vecere else None
+    jidelnicek_vecere = tabulka_jidelnicek_vecere.__html__() if tabulka_jidelnicek_vecere else None,
+    nedostatek_potravin = nedostatek_potravin
     )
 
 

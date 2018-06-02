@@ -65,10 +65,21 @@
 						</form>
 						</div>
 					</section>
+
 			<!-- Table JIDELNICEK -->
 				<section class = "wrapper">
 					<div class = "inner">
 						<div style="display: {{zobrazJidelnicek}};">
+							{% if nedostatek_potravin %} 
+							<table class = "upozorneni">
+								<tbody>
+									<tr>
+										<td>Nemáte dostatečné množství zásob na naplnění všech chodů jídelníčku. Prosím, doplňte zásoby.
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							{%endif%}
 							<div style="display: {{zobrazSnidane}};">
 								<h2>Snídaně</h2>
 								<div class="table-wrapper">
