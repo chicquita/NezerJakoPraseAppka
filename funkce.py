@@ -63,7 +63,8 @@ def vyber_zakladni_kosik (zakladni_kosiky, kategorie):
 		pocet_jidel = len(vyber_jidla_z_kategorii(idcka))
 		if pocet_jidel == 0 :
 			vyber.remove(i)
-			
+	if vyber == []:
+		raise IndexError("V zásobách není dostatečné množství potravin.")		
 	return random.choice(vyber)
 
 
