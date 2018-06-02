@@ -1,4 +1,4 @@
-#BUDE SLLOUZIT CASEM PRO PRIHLASENI, KOD NIZE JE POUZE HRUBY NASTREL, KTERY ZATIM NEOBSAHUJE VSECHNY POTREBNE STRINGFIELDS
+#BUDE SLLOUZIT CASEM PRO PRIHLASENI, ZATIM JEN NASTREL
 
 from flask_wtf import FlaskForm 
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, RadioField, IntegerField, SelectField
