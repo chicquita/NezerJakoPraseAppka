@@ -5,7 +5,7 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField, Radio
 from wtforms.validators import DataRequired, Email, Length
 
 class SignupForm(FlaskForm):
-  first_name = StringField('Jméno', validators=[DataRequired("Zadej jméno.")])
+	first_name = StringField('Jméno', validators=[DataRequired("Zadej jméno.")])
 	last_name = StringField('Příjmení', validators=[DataRequired("Zadej příjmení.")])
 	email = StringField('Email', validators=[DataRequired("Zadej email."), Email("Prosím zadejte emailovou adresu.")])
 	password = PasswordField('Heslo', validators=[DataRequired("Zadej heslo."), Length(min=6, message="Heslo musí obsahovat 6 a více znaků.")])
