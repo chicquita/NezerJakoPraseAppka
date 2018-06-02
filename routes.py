@@ -20,7 +20,7 @@ VYPOCET = BaseVypocet()
 #VYPOCET = VypocetDbBased ()
 
 app = Flask(__name__)
-
+app.config.from_object(Config) #pro wtf forms
 #-------------------------------------------------------------------HOMEPAGE--------------------------------------------------------------------#
 @app.route("/")
 def index():
