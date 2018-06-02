@@ -85,10 +85,10 @@ def jidelnicek():
      prozatim jsem zvolila nazev a mnozstvi (mnozstvi v sobe spojuje hodnotu mnozstvi a merne jednotky)
      mozne v budoucnu doplnit o kj, prozatim staci'''
  
- '''
- Nastavíme výchozí hodnoty pro jednotlivé jídleníčky na None a až při postu se 
- budou generovat a zobrazovat jednotlivá jídle ve vybraných denních chodech.
- '''
+  '''
+  Nastavíme výchozí hodnoty pro jednotlivé jídleníčky na None a až při postu se 
+  budou generovat a zobrazovat jednotlivá jídle ve vybraných denních chodech.
+  '''
   tabulka_jidelnicek_snidane = None
   tabulka_jidelnicek_svacina_dopo = None
   tabulka_jidelnicek_obed = None
