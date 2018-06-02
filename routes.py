@@ -274,7 +274,7 @@ def signup():
   form = SignupForm()
   if form.validate_on_submit():
     sex = form.sex.data
-    return redirect(url_for('/'))
+    #return redirect(url_for('/'))
   return render_template('signup.html', form=form)
 
 
