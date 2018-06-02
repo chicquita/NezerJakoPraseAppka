@@ -7,9 +7,9 @@ from baseVypocet import BaseVypocet         #baseVypocet obsahuje testovaci hodn
 from vypocetDbBased import VypocetDbBased    
 '''vypocetDbBased: generovani jidelnicku zalozeno na selectech z DB 
 (DB pracuje navic s tabulkami pattern, pattern_line, pattern_line_set) narozdil od vypoctu zalozenem na pythonu'''
+from forms import SignupForm
+from config import Config
 
-'''from forms import SignupForm
-   registrace a propisovani dat do db se bude resit az v budoucnu'''
 
 #---------------------------------------------------------PRIPOJENI DO DB & SELECTY ------------------------------------------------------------#
 
@@ -271,13 +271,12 @@ def muj_ucet():
 
 @app.route("/signup", methods=['GET', 'POST'])
 def signup():
-  error = None
-  if request.method == 'POST':
-      if request.form['prezdivka'] != 'admin' or request.form['heslo'] != 'admin':
-        error = 'Neplatné přihlašovací údaje. Prosím zkuste znovu.'
-      else:
-        return redirect(url_for('/'))
-  return render_template('signup.html', error=error)
+  form = SignupForm()
+  if form.validate_on_submit():
+    sex = form.sex.data
+    return redirect(url_for('/'))
+  return render_template('signup.html', form=form)
+
 
 '''
 @app.route("/signup", methods=["GET", "POST"])
