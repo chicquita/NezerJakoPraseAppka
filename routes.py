@@ -13,7 +13,7 @@ from config import Config
 
 #---------------------------------------------------------PRIPOJENI DO DB & SELECTY ------------------------------------------------------------#
 
-DB = DbHelper("ada", "ada", "To heslo ti nereknu")               
+DB = DbHelper("janicka", "janicka", "Tajne heslo, ktere neni na githubu")               
 #v DBHelperu je obsazeno napojeni do DB a zakladni selecty (select_all,single row, single value)
 
 VYPOCET = BaseVypocet()
