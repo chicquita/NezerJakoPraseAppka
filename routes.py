@@ -16,7 +16,8 @@ from vypocetDbBased import VypocetDbBased
 DB = DbHelper("ada", "ada", "To heslo ti nereknu")               
 #v DBHelperu je obsazeno napojeni do DB a zakladni selecty (select_all,single row, single value)
 
-VYPOCET = BaseVypocet()        #sem se hodi nazev jancinyho filu s vypoctem
+VYPOCET = BaseVypocet()
+#VYPOCET = VypocetDbBased ()
 
 app = Flask(__name__)
 
