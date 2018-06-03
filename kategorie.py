@@ -12,9 +12,9 @@ snidane = {
 	"zelenina":[55, 86],
 	"prilohy_pro_slane_pecivo":[63, 62, 52, 37, 35, 34, 33, 32, 31, 
 		28, 27, 26, 22, 21, 20, 18, 17, 16, 14, 12],
-	"prilohy_pro_sladke_pecivo":[67, 66, 64, 54, 52, 48, 27, 26],
-	"prilohy_pro_cerealie" :[67, 66, 54, 52, 48, 27, 26],
-	"prilohy_pro_jogurty":[28, 35, 39, 48, 52, 54, 61, 64, 66, 67],
+	"prilohy_pro_sladke_pecivo":[66, 64, 54, 52, 48, 27, 26],
+	"prilohy_pro_cerealie" :[66, 54, 52, 48, 27, 26],
+	"prilohy_pro_jogurty":[28, 35, 39, 48, 52, 54, 61, 64, 66],
 	"napoje":[30, 41, 42, 44, 45, 46]
 }
 
