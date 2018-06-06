@@ -238,11 +238,11 @@ def muj_ucet():
     mnozstvi = Col('Množství')
 
  # Populate the table
-  tabulka_jidelnicek_snidane = Jidelnicek(get_snidane())
-  tabulka_jidelnicek_svacina_dopo = Jidelnicek(get_svacina_dopo())
-  tabulka_jidelnicek_obed = Jidelnicek(get_obed())
-  tabulka_jidelnicek_svacina_odpo = Jidelnicek(get_svacina_odpo())
-  tabulka_jidelnicek_vecere = Jidelnicek(get_vecere())
+  #tabulka_jidelnicek_snidane = Jidelnicek(get_snidane())
+  #tabulka_jidelnicek_svacina_dopo = Jidelnicek(get_svacina_dopo())
+  #tabulka_jidelnicek_obed = Jidelnicek(get_obed())
+  #tabulka_jidelnicek_svacina_odpo = Jidelnicek(get_svacina_odpo())
+  #tabulka_jidelnicek_vecere = Jidelnicek(get_vecere())
 
   # Print the html
   return render_template("muj_ucet.html", 
@@ -254,11 +254,11 @@ def muj_ucet():
     zobrazObed = "initial" if is_obed else "None",
     zobrazSvacinaOdpo = "initial" if is_svacina_odpo else "None",
     zobrazVecere = "initial" if is_vecere else "None", 
-    jidelnicek_snidane = tabulka_jidelnicek_snidane.__html__(), 
-    jidelnicek_svacina_dopo = tabulka_jidelnicek_svacina_dopo.__html__(), 
-    jidelnicek_obed = tabulka_jidelnicek_obed.__html__(),  
-    jidelnicek_svacina_odpo = tabulka_jidelnicek_svacina_odpo.__html__(), 
-    jidelnicek_vecere = tabulka_jidelnicek_vecere.__html__()
+    #jidelnicek_snidane = tabulka_jidelnicek_snidane.__html__(), 
+    #jidelnicek_svacina_dopo = tabulka_jidelnicek_svacina_dopo.__html__(), 
+    #jidelnicek_obed = tabulka_jidelnicek_obed.__html__(), 
+    #jidelnicek_svacina_odpo = tabulka_jidelnicek_svacina_odpo.__html__(), 
+    #jidelnicek_vecere = tabulka_jidelnicek_vecere.__html__()
     )
 
 
@@ -269,12 +269,30 @@ def muj_ucet():
 
 # KOD JE POUZE NASTREL, ZATIM NEFUNGUJE, NEMA VYSOKOU PRIORITU
 
+def check_user(email):
+  duplicita = DB.select_single_value(
+    "select count (id) from uzivatel where mail = %s", (email,))
+  if duplicita == 0:
+    return True
+  else:
+    return False
+
 @app.route("/signup", methods=['GET', 'POST'])
 def signup():
   form = SignupForm()
   if form.validate_on_submit():
-    sex = form.sex.data
-    #return redirect(url_for('/'))
+    if not check_user(form.email.data): #touto podminkou se vyhodnoti pravda/nepravda
+      return render_template('signup.html', form=form) #ted jsem overila, ze uzivatel jeste neni v databazi
+    DB.insert("""
+    insert into uzivatel 
+    (jmeno, prijmeni, vek, mail, vaha, vyska, pohlavi,denni_prijem_kj, makro_tuky, 
+    makro_sacharidy, makro_bilkoviny, nickname) 
+    values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) """,
+    (form.first_name.data, form.last_name.data, form.age.data, form.email.data,
+      form.weight.data, form.height.data, form.sex.data, form.dailykj.data, 
+      form.makrotuky.data, form.makrosacharidy.data, form.makrobilkoviny.data, 
+      form.nickname.data))
+    return redirect('/muj_ucet')
   return render_template('signup.html', form=form)
 
 

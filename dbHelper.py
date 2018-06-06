@@ -6,16 +6,21 @@ class DbHelper():
 	
 
 	def __init__(self, dbname, user, password):
-	    self.connection = psycopg2.connect(dbname=dbname, user=user, password= password, host="da.stderr.cz")
-	
+		self.connection = psycopg2.connect(dbname=dbname, 
+			user=user, 
+			password= password, 
+			host="da.stderr.cz")
+		self.connection.autocommit = True
+		self.cursor = self.connection.cursor()
+
+
 	#vraci matici
 	def select_all(self, select, binds = None):				
-		cursor = self.connection.cursor()	
 		if binds:
-			cursor.execute(select, binds)
+			self.cursor.execute(select, binds)
 		else:
-			cursor.execute(select)			
-		return cursor.fetchall() 		
+			self.cursor.execute(select)			
+		return self.cursor.fetchall() 		
 
 	#vraci 1 radek
 	def select_single_row(self, select, binds = None):
@@ -31,3 +36,9 @@ class DbHelper():
 		single_row = self.select_single_row( select, binds)
 	
 		return single_row[0]   
+
+
+	def insert(self, insert, binds = None):
+		self.cursor.execute(insert, binds)
+
+
