@@ -15,8 +15,8 @@ pro ks: 1 - 10 ks
 pro porce: 1 - 5
 """
 
-TABULKA= "test_zasoby"
-POCET_ZASOB = 70
+TABULKA= "test_zasoby_1"
+POCET_ZASOB = 20
 
 try:
     conn = psycopg2.connect(dbname="janicka", user="janicka", password= "Tajne heslo, ktere neni na githubu", host="da.stderr.cz")
