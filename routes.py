@@ -7,7 +7,7 @@ from baseVypocet import BaseVypocet         #baseVypocet obsahuje testovaci hodn
 from vypocetDbBased import VypocetDbBased    
 '''vypocetDbBased: generovani jidelnicku zalozeno na selectech z DB 
 (DB pracuje navic s tabulkami pattern, pattern_line, pattern_line_set) narozdil od vypoctu zalozenem na pythonu'''
-from forms import SignupForm
+from forms import SignupForm, VytvorZasoby
 from config import Config
 
 
@@ -162,8 +162,21 @@ def zasoby():
 
   # Print the html
   return render_template("zasoby.html", tabulka_zasob = tabulka_zasob.__html__())
-#-------------------------------------------------------------------MUJ UCET---------------------------------------------------------------#
 
+#-------------------------------------------------------------------DOPLNENI ZASOB---------------------------------------------------------------#
+
+@app.route("/zasoby_doplneni", methods=['GET', 'POST'])
+def zasoby_vyplneni():
+  form = VytvorZasoby()
+  return render_template('zasoby_vyplneni.html', form=form)
+
+
+
+
+
+
+
+#-------------------------------------------------------------------MUJ UCET---------------------------------------------------------------#
 '''
 TATO STRANKA JE JESTE VE VYSTAVBE(viz problem s query nize), SLUCUJE JIDELNICEK.HTML a ZASOBY.HTML DOHROMADY, 
 BUDE UMOZNOVAT I ZADAVANI POTRAVIN DO DB
@@ -277,6 +290,7 @@ def check_user(email):
   else:
     return False
 
+#neřešíme prozatím domácnost
 @app.route("/signup", methods=['GET', 'POST'])
 def signup():
   form = SignupForm()
@@ -293,6 +307,13 @@ def signup():
       form.makrotuky.data, form.makrosacharidy.data, form.makrobilkoviny.data, 
       form.nickname.data))
     return redirect('/muj_ucet')
+  #else:
+   # return render_template('signup.html', form = form)
+    #if error is form.first.name:
+      #vypis chybu
+    #if error is form.last.name:
+      #vypis chybu
+
   return render_template('signup.html', form=form)
 
 

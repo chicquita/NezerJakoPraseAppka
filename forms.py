@@ -33,3 +33,10 @@ class SignupForm(FlaskForm):
 	makrotuky = IntegerField('Makro tuky (g)',
 		validators=[DataRequired("Zadej makro tuky.")])
 	submit = SubmitField('Registrovat')
+
+class VytvorZasoby(FlaskForm):
+	nazev_jidla = StringField('Název jídla',
+		validators=[DataRequired("Zadej název jídla.")])
+	mnozstvi = IntegerField('Množství',
+		validators=[DataRequired("Zadej množství jídla.")])
+	submit = SubmitField('Odeslat')
