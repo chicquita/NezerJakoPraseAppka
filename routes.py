@@ -9,6 +9,7 @@ from vypocetDbBased import VypocetDbBased
 (DB pracuje navic s tabulkami pattern, pattern_line, pattern_line_set) narozdil od vypoctu zalozenem na pythonu'''
 from forms import SignupForm, VytvorZasoby
 from config import Config
+import json
 
 
 #---------------------------------------------------------PRIPOJENI DO DB & SELECTY ------------------------------------------------------------#
@@ -170,10 +171,21 @@ def zasoby_vyplneni():
   form = VytvorZasoby()
   return render_template('zasoby_vyplneni.html', form=form)
 
+#-------------------------------------------------------------------AUTO COMPLETE---------------------------------------------------------------#
 
-
-
-
+@app.route("/autocomplete", methods=['GET', 'POST'])
+def autocomplete():
+  result = ''
+  if request.method == 'POST':
+    query=request.form['query']
+    result = DB.select_all("SELECT nazev from potraviny where nazev ilike '%" + query +"%'") 
+    print(result)
+    res = []
+    for i in result:
+      res.append(i[0])
+    print(res)
+    return json.dumps({"suggestions":res})
+  return "Nechytl se nam post."
 
 
 #-------------------------------------------------------------------MUJ UCET---------------------------------------------------------------#

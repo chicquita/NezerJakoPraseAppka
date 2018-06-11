@@ -67,6 +67,19 @@
 			<script src="../static/js/skel.min.js"></script>
 			<script src="../static/js/util.js"></script>
 			<script src="../static/js/main.js"></script>
-
+			<script src="../static/js/jquery.autocomplete.js"></script>
+			<script>
+				$("#nazev_jidla").autocomplete({
+                	serviceUrl:'autocomplete',
+                    type:'POST',
+                    //width: 450, //??
+ 					minChars: 3,
+                    onSelect: function (suggestion) { 
+                    	$('#selection').html('You selected: ' + suggestion.value + ', ' + suggestion.data);
+                    },
+ 					showNoSuggestionNotice: true,
+ 					noSuggestionNotice: 'Sorry, no matching results',
+ 				});
+ 			</script>
 	</body>
 </html>
