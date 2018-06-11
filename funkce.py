@@ -79,7 +79,7 @@ def velky_select():
 	'''
 	return select_all("""SELECT 
 		p.nazev, z.baleni, p.kj, mj.zkratka, z.baleni * p.kj, p.id_kategorie
-		FROM test_zasoby z 
+		FROM zasoby z 
 		JOIN potraviny p on z.id_potraviny = p.id 
 		JOIN merna_jednotka mj on p.id_merna_jednotka = mj.id""")
 
